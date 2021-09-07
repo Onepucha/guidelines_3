@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/head.html',{
+'title': 'Списки',
+'description': '',
+'keywords': '',
+'favicon': 'images/favicon.png'
+})
+
+<body>
+    //= template/sidenav.html
+    <div class="main">
+        <div class="container mb-blue">
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <h1 class="h1">Списки (.list__ul / .list__ol)</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <ul class="list__ul">
+                        <li class="list__ul-docs"><a class="scrollto" href="#Маркированный-список">Маркированный
+                                список</a></li>
+                        <li class="list__ul-docs"><a class="scrollto" href="#Нумерованный-список">Нумерованный
+                                список</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Маркированный список -->
+        <div class="container mb-yellow" id="Маркированный-список">
+            <div class="row mb-cyan">
+                <div class="col-12 css">
+                    <h3 class="h3 text-blue">Маркированный список</h3>
+                    <div class="text text-l">Для маркированного списка используется тэг <code>ul</code> с классом
+                        <code>list__ul</code> и класс, отвечающий за размер текста в списке (например,
+                        <code>text-m</code>). Каждый элемент маркированного списка должен иметь класс
+                        <code>list__ul-item,</code>, отвечающий за стилизацию списка.</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="text text-l text-bold">Пример:</div>
+                    <ul class="list__ul text text-m">
+                        <li class="list__ul-item">Пункт 1.</li>
+                        <li class="list__ul-item">Пункт 2.</li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <pre>
+            <code class="language-html">
+&lt;ul class=&quot;list__ul text text-m&quot;&gt;
+    &lt;li class=&quot;list__ul-item&quot;&gt;Пункт 1.&lt;/li&gt;
+    &lt;li class=&quot;list__ul-item&quot;&gt;Пункт 2.&lt;/li&gt;
+&lt;/ul&gt;
+            </code>
+          </pre>
+                </div>
+            </div>
+        </div>
+        <div class="container mb-red">
+            <div class="row mb-cyan">
+                <div class="col-12 css">
+                    <div class="text text-l">Для списка со знаками «+» и «-» нужно поменять префикс, если нужен «+», то
+                        префикс <code>-plus</code>, если нужен минус, то префикс <code>-minus</code>.</div>
+                </div>
+            </div>
+            <div class="row mb-yellow">
+                <div class="col-6">
+                    <div class="text text-l text-bold">Пример списка с «+»:</div>
+                    <ul class="list__ul text text-m">
+                        <li class="list__ul-plus">Пункт 1.</li>
+                        <li class="list__ul-plus">Пункт 2.</li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <pre>
+            <code class="language-html">
+&lt;ul class=&quot;list__ul text text-m&quot;&gt;
+    &lt;li class=&quot;list__ul-plus&quot;&gt;Пункт 1.&lt;/li&gt;
+    &lt;li class=&quot;list__ul-plus&quot;&gt;Пункт 2.&lt;/li&gt;
+&lt;/ul&gt;
+            </code>
+          </pre>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="text text-l text-bold">Пример списка с «-»:</div>
+                    <ul class="list__ul text text-m">
+                        <li class="list__ul-minus">Пункт 1.</li>
+                        <li class="list__ul-minus">Пункт 2.</li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <pre>
+            <code class="language-html">
+&lt;ul class=&quot;list__ul text text-m&quot;&gt;
+    &lt;li class=&quot;list__ul-minus&quot;&gt;Пункт 1.&lt;/li&gt;
+    &lt;li class=&quot;list__ul-minus&quot;&gt;Пункт 2.&lt;/li&gt;
+&lt;/ul&gt;
+            </code>
+          </pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Нумерованный список -->
+        <div class="container mb-yellow" id="Нумерованный-список">
+            <div class="row mb-cyan">
+                <div class="col-12 css">
+                    <h3 class="h3 text-blue">Нумерованный список</h3>
+                    <div class="text text-l">Для нумерованного списка используется тэг <code>ol</code> с классом
+                        <code>list__ol</code> и класс, отвечающий за размер текста в списке (например,
+                        <code>text-m</code>). Каждый элемент нумерованного списка должен иметь класс
+                        <code>list__ol-item</code>, отвечающий за стилизацию списка.</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="text text-l text-bold">Пример:</div>
+                    <ol class="list__ol text text-m">
+                        <li class="list__ol-item">Пункт 1.</li>
+                        <li class="list__ol-item">Пункт 2.</li>
+                    </ol>
+                </div>
+                <div class="col-6">
+                    <pre>
+            <code class="language-html">
+&lt;ol class=&quot;list__ol text text-m&quot;&gt;
+    &lt;li class=&quot;list__ol-item&quot;&gt;Пункт 1.&lt;/li&gt;
+    &lt;li class=&quot;list__ol-item&quot;&gt;Пункт 2.&lt;/li&gt;
+&lt;/ol&gt;
+            </code>
+          </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    //= template/footer.html
+</body>
+
+</html>

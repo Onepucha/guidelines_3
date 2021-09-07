@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1280px, initial-scale=1.0">
+  <meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <!-- <link rel="stylesheet" href="./css/mono-blue.css"> -->
+  <link rel="stylesheet" href="./css/main.min.css" />
+
+  <title>Плитка с текстом, иконкой и разделителем</title>
+
+  <header class="header fixed-top">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-24 col-xs-14">
+          <div id="lmm-menu">
+            <lmm-menu :glossary="glossary" :materials="materials" :menu-items="menuItems" :show-content="true"
+              :show-glossary="true" :show-materials="true">
+            </lmm-menu>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container container-header">
+      <div class="mount"></div>
+      <div class="header__top">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex align-items-center">
+              <p class="header__course-name">Гайдлайн</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</head>
+
+
+<body>
+    <div class="sidenav">
+        <div class="sidenav-left">
+            <div class="sidenav-left-content">
+                <div class="sidenav-left-content--item">
+                    <a class="first" data-href="tabs.html" href="./tabs.html">Вкладки / табы (.tabs)</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="timeline.html" href="./timeline.html">Таймлайн</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="speech.html" href="./speech.html">Разговорная выноска / текстовый баллон (.speech)</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="buttons.html" href="./buttons.html">Кнопки (.btn)</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="modal.html" href="./modal.html">Модальные окна (.modal)</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="features.html" href="./features.html">Переворачивающиеся карточки (features)</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="text.html" href="./text.html">Тексты (.text-s/m/l/xl/xxl)</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="list.html" href="./list.html">Списки (.list__ul / .list__ol)</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="plate.html" href="./plate.html">Плитка с текстом, иконкой и разделителем</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="table.html" href="./table.html">Таблица (.table)</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="accordion.html" href="./accordion.html">Раскрывающийся список (.accordion)</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="slider.html" href="./slider.html">Карусель / галерея (.slider_item)</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="course-map.html" href="./course-map.html">Ветвление / карта курса</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="test.html" href="./test.html">Тестирование</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="nav-curse.html" href="./nav-curse.html">Меню курса</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container mb-blue">
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <h1 class="h1">Плитка с текстом, иконкой и разделителем (.plate)</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <ul class="list__ul">
+                        <li class="list__ul-docs"><a class="scrollto" href="#Плитка-с-текстом">Плитка с текстом</a></li>
+                        <li class="list__ul-docs"><a class="scrollto" href="#Плитка-с-иконкой">Плитка с иконкой</a></li>
+                        <li class="list__ul-docs"><a class="scrollto" href="#Плитка-с-разделителем">Плитка с
+                                разделителем</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Плитка с текстом -->
+        <div class="container mb-yellow" id="Плитка-с-текстом">
+            <div class="row mb-cyan">
+                <div class="col-12 css">
+                    <h3 class="h3 text-blue mb-cyan">Плитка с текстом</h3>
+                    <div class="text text-l">Плитка с обводкой для предоставления информации. Для отображения элемента
+                        создайте
+                        блок с классом <code>plate</code>, в который помещается информация.</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="text text-l text-bold mb-pink">Пример:</div>
+                    <div class="plate plate--icon" style="width: 275px;">
+                        <div class="divider left">
+                            <div class="divider--text">
+                                <h1 class="h1 text-light-gray">1</h1>
+                            </div>
+                        </div>
+                        <h4 class="h4">Ситуационные</h4>
+                        <div class="text text-xl">Общие вопросы о текущей ситуации.</div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <pre>
+            <code class="language-html">
+&lt;div class=&quot;plate plate--icon&quot; style=&quot;width: 275px;&quot;&gt;
+    &lt;div class=&quot;divider left&quot;&gt;
+        &lt;div class=&quot;divider--text&quot;&gt;
+            &lt;h1 class=&quot;h1 text-light-gray&quot;&gt;1&lt;/h1&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;h4 class=&quot;h4&quot;&gt;Ситуационные&lt;/h4&gt;
+    &lt;div class=&quot;text text-xl&quot;&gt;Общие вопросы о текущей ситуации.&lt;/div&gt;
+&lt;/div&gt;
+            </code>
+          </pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Плитка с иконкой -->
+        <div class="container mb-yellow" id="Плитка-с-иконкой">
+            <div class="row mb-red">
+                <div class="col-12 css">
+                    <h3 class="h3 text-blue mb-cyan">Плитка с иконкой</h3>
+                    <div class="text text-l">Для правильного отображения иконки внутри плитки нужно к блоку с классом
+                        <code>plate</code> добавить класс <code>plate—icon</code> (он отвечает за иконку внутри блока).
+                        Также внутрь
+                        блока с классом <code>plate plate—icon</code> нужно добавить блок с классом
+                        <code>divider</code>. У этого
+                        класса есть 2 преднастройки позиционирования картинки:</div>
+                    <ul class="list__ul text text-m">
+                        <li class="list__ul-item">класс <code>left</code> позиционирует картинку по левому краю;</li>
+                        <li class="list__ul-item">класс <code>right</code> — по правому.</li>
+                    </ul>
+                    <div class="text text-l">Внутри блока с классом <code>divider left</code> или <code>divider
+                            right</code>
+                        должен быть блок с классом <code>divider—text</code>, в который помещается иконка или нужный
+                        текст.</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="text text-l text-bold mb-pink">Пример:</div>
+                    <div class="plate plate--icon" style="width: 275px;">
+                        <div class="divider center">
+                            <div class="divider--text">
+                                <img src="./images/icon-1.png" alt="icon-1">
+                            </div>
+                        </div>
+                        <h4 class="h4">Департамент брокерского обслуживания банка Компания</h4>
+                        <div class="text text-xl">Брокерские услуги для розничных клиентов.</div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <pre>
+            <code class="language-html">
+&lt;div class=&quot;plate plate--icon&quot; style=&quot;width: 275px;&quot;&gt;
+    &lt;div class=&quot;divider center&quot;&gt;
+        &lt;div class=&quot;divider--text&quot;&gt;
+            &lt;img src=&quot;./images/icon-1.png&quot; alt=&quot;icon-1&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;h4 class=&quot;h4&quot;&gt;Департамент брокерского обслуживания банка Компания&lt;/h4&gt;
+    &lt;div class=&quot;text text-xl&quot;&gt;Брокерские услуги для розничных клиентов.&lt;/div&gt;
+&lt;/div&gt;
+            </code>
+          </pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Плитка с разделителем -->
+        <div class="container mb-yellow" id="Плитка-с-разделителем">
+            <div class="row mb-red">
+                <div class="col-12 css">
+                    <h3 class="h3 text-blue mb-cyan">Плитка с разделителем</h3>
+                    <div class="text text-l">Чтобы добавить разделители между картинкой и текстом, нужно вставить внутрь
+                        блока с
+                        классом <code>divider</code> первым элементом тэг <code>span</code> с классом
+                        <code>divider-border
+                            before</code> (т.е. перед), после чего разместить блок с классом <code>divider—text</code> с
+                        картинкой
+                        внутри блока, и добавить заключительный тэг <code>span</code> с классом <code>divider-border
+                            after</code>
+                        (т.е. после).</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="text text-l text-bold mb-pink">Пример:</div>
+                    <div class="plate plate--icon" style="width: 275px;">
+                        <div class="divider">
+                            <span class="divider-border after"></span>
+                            <div class="divider--text">
+                                <img src="./images/icon-1.png" alt="icon-1">
+                            </div>
+                            <span class="divider-border before"></span>
+                        </div>
+                        <div class="text text-xl">Плитка с разделителем.</div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <pre>
+                        <code class="language-html">
+            &lt;div class=&quot;plate plate--icon&quot; style=&quot;width: 275px;&quot;&gt;
+                &lt;div class=&quot;divider&quot;&gt;
+                    &lt;span class=&quot;divider-border after&quot;&gt;&lt;/span&gt;
+                    &lt;div class=&quot;divider--text&quot;&gt;
+                        &lt;img src=&quot;./images/icon-1.png&quot; alt=&quot;icon-1&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;span class=&quot;divider-border before&quot;&gt;&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;text text-xl&quot;&gt;Плитка с разделителем.&lt;/div&gt;
+            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Плитка с разделителем -->
+        <div class="container mb-yellow" id="Кликабельные-плитки">
+            <div class="row mb-red">
+                <div class="col-12">
+                    <h3 class="h3 text-blue mb-cyan">Кликабельные плитки</h3>
+                    <div class="text text-l css">Чтобы вызвать модальное окно, нужно навесить событие onclick на блок <code>plate</code>, где <code>#TXT_*</code> — идентификатор блока <code>onclick="$('#TXT_*').show()</code>",
+                    пример можно посмотреть в разделе <a href="./modal.html">"Модальные окна (.modal)"</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="text text-l text-bold mb-pink">Пример:</div>
+                    <div class="plate plate--icon modal-open" data-href="1" style="width: 275px;">
+                        <div class="divider">
+                            <span class="divider-border after"></span>
+                            <div class="divider--text">
+                                <img src="./images/icon-1.png" alt="icon-1">
+                            </div>
+                            <span class="divider-border before"></span>
+                        </div>
+                        <div class="text text-xl">Плитка с нажатием</div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <pre>
+                        <code class="language-html hljs xml">
+&lt;div class="plate plate--icon modal-open" style="width: 275px;" onclick="$('#TXT_ID_БЛОКА').show()">
+    &lt;div class="divider">
+        &lt;span class="divider-border after">&lt;/span>
+        &lt;div class="divider--text">
+            &lt;img src="./images/icon-1.png" alt="icon-1">
+        &lt;/div>
+        &lt;span class="divider-border before">&lt;/span>
+    &lt;/div>
+    &lt;div class="text text-xl">Плитка с нажатием&lt;/div>
+&lt;/div>
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+        <!-- Modal content -->
+        <style>
+            .modal {
+                display: none;
+                position: fixed;
+            }
+        </style>
+        <div class="modal" data-modal="1">
+            <div class="modal-content">
+                <div class="modal-content-body">
+                    <div class="h5 mb-pink">Пример заголовка в модальном окне с текстом.
+                    </div>
+                    <div class="text text-l">Пример текста в модальном окне с текстом.
+                    </div>
+                </div>
+            </div>
+            <div class="btn btn__primary btn__round m btn__modal modal-close">Назад
+            </div>
+        </div>
+
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        modals();
+    </script>
+</body>
+
+</html>

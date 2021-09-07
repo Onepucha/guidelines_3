@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/head.html',{
+'title': 'Меню курса',
+'description': '',
+'keywords': '',
+'favicon': 'images/favicon.png'
+})
+
+
+<body>
+//= template/sidenav.html
+<div class="main">
+    <div class="container mb-cyan">
+        <div class="row ">
+            <div class="col-12">
+                <h1 class="h1">Меню курса</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Для вызова всплывающего (модального) окна -->
+    <div class="container mb-red">
+        <div class="row mb-cyan">
+            <div class="col-12">
+                <h3 class="h3 text-blue">Изменение навигации курса</h3>
+            </div>
+        </div>
+        <div class="row mb-red">
+            <div class="col-12">
+                <div class="text text-l css">Для изменения навигации курса необходимо перейти на
+                    мастер-слайд и изменить текстовый элемент <code>menu</code>. По дефолту все пункты
+                    меню заблокированы. Чтобы сделать пункт активным, нужно убрать class <code>disable</code>.
+                    Чтобы задать переход на нужный кадр, необходимо в событии
+                    <code>onclick</code> вызвать метод <code>gotoFrame('ID_FRAME')</code>, где <code>ID_FRAME</code>
+                    — это идентификатор кадра. Для корректной работы меню необходимо, чтобы
+                    количество слайдов соответствовало количеству пунктов меню.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mb-yellow">
+                <h5 class="text-dark-blue">Пример первого пункта меню:</h5>
+            </div>
+            <div class="col-6">
+                <p class="contents_item-list title first js-nav-link" data-frame="FRAME_37">
+                    Первый пункт меню
+                </p>
+            </div>
+            <div class="col-6">
+                <pre>
+                    <code class="language-html">
+&lt;p class="contents_item-list title first js-nav-link" data-frame="FRAME_37">
+    Первый пункт меню
+&lt;/p>
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mb-yellow">
+                <h5 class="text-dark-blue">Пример заблокированного пункта меню:</h5>
+            </div>
+            <div class="col-6">
+                <div class="contents_item-list js-nav-link disabled" data-frame="ID_FRAME">
+                    <p>Заблокированный пункт меню</p>
+                </div>
+            </div>
+            <div class="col-6">
+                    <pre>
+            <code class="language-html">
+&lt;div class="contents_item-list js-nav-link disabled" data-frame="ID_FRAME">
+    &lt;p>Заблокированный пункт меню&lt;/p>
+&lt;/div>
+            </code>
+          </pre>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mb-yellow">
+                <h5 class="text-dark-blue">Пример многоуровнего списка:</h5>
+            </div>
+            <div class="col-6">
+                <div class="contents_item-list">
+                    <p data-frame="FRAME_119">1. Заголовок</p>
+                    <div class="contents_item-list_subitem contents_item-list js-nav-link"
+                         data-frame="FRAME_103">
+                        Подпункт 1
+                    </div>
+                    <div class="contents_item-list_subitem contents_item-list js-nav-link"
+                         data-frame="FRAME_103">
+                        Подпункт 2
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <pre>
+                    <code class="language-html">
+&lt;div class="contents_item-list title js-nav-link disabled" data-frame="FRAME_118">
+    Пункт меню заголовок
+&lt;/div>
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+//= template/footer.html
+</body>
+
+</html>

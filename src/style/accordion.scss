@@ -1,0 +1,54 @@
+.accordion{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid $gray;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &__title {
+        position: relative;
+        width: 100%;
+        cursor: pointer;
+        background-color: $white;
+        color: $dark-blue;
+        outline: 0;
+        font-size: $fs14;
+        line-height: $lh21;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid $gray;
+        padding: 14px 90px 14px 30px;
+
+        &.ui-state-active {
+            
+            &::before {
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+
+        &::before {
+            position: absolute;
+            right: 30px;
+            height: 30px;
+            width: 30px;
+            transition: transform .3s;
+            content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTUiIGN5PSIxNSIgcj0iMTQuNjU5MSIgdHJhbnNmb3JtPSJyb3RhdGUoOTAgMTUgMTUpIiBmaWxsPSIjRjFGMUYxIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjAuNjgxODE4Ii8+CjxwYXRoIGQ9Ik0yMC40NTQ2IDEyLjk1NDZMMTUgMTguNDA5MUw5LjU0NTUgMTIuOTU0NiIgc3Ryb2tlPSIjQTlBOUE5IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==);
+            top: 50%;
+            transform: translateY(-50%) rotate(0);
+        }
+    }
+
+    &__content {
+        font-family: $Regular;
+        line-height: inherit !important;
+        padding: 14px 90px 14px 30px;
+
+        &.ui-accordion-content-active {
+            border: none;
+            border-bottom: 1px solid $gray;
+        }
+    }
+}

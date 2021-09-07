@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/head.html',{
+'title': 'Тексты',
+'description': '',
+'keywords': '',
+'favicon': 'images/favicon.png'
+})
+
+<body>
+    //= template/sidenav.html
+    <div class="main">
+        <div class="container mb-blue">
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <h1 class="h1">Тексты (.text-s/m/l/xl/xxl)</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <ul class="list__ul">
+                        <li class="list__ul-docs"><a class="scrollto" href="#Размерность-текста">Размерность текста</a>
+                        </li>
+                        <li class="list__ul-docs"><a class="scrollto" href="#Цвета-текста">Цвета текста</a></li>
+                        <li class="list__ul-docs"><a class="scrollto" href="#Начертание-и-жирность-текста">Начертание и
+                                жирность текста </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Размерность текста -->
+        <div class="container mb-red" id="Размерность-текста">
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <h3 class="h3 text-blue">Размерность текста</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="text text-l text-bold">Примеры размерности текста:</div>
+                    <div class="text text-s">Размерность s</div>
+                    <div class="text text-m">Размерность M</div>
+                    <div class="text text-l">Размерность L</div>
+                    <div class="text text-xl">Размерность XL</div>
+                    <div class="text text-xxl">Размерность XXL</div>
+                </div>
+                <div class="col-6">
+                    <pre>
+            <code class="language-html">
+&lt;div class=&quot;text text-s&quot;&gt;Размерность s&lt;/div&gt;
+&lt;div class=&quot;text text-m&quot;&gt;Размерность M&lt;/div&gt;
+&lt;div class=&quot;text text-l&quot;&gt;Размерность L&lt;/div&gt;
+&lt;div class=&quot;text text-xl&quot;&gt;Размерность XL&lt;/div&gt;
+&lt;div class=&quot;text text-xxl&quot;&gt;Размерность XXL&lt;/div&gt;
+            </code>
+          </pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Цвета текста -->
+        <div class="container mb-red" id="Цвета-текста">
+            <div class="row mb-yellow">
+                <div class="col-12">
+                    <h3 class="h3 text-blue mb-cyan">Цвета текста</h3>
+                    <div class="text text-l">Чтобы установить цвет текста, нужно добавить класс с подготовленным цветом.
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="text text-l text-bold">Примеры цветов текста:</div>
+                    <div class="text text-l text-black">Черный</div>
+                    <div class="text text-l text-light-black">Светло-черный</div>
+                    <div class="text text-l text-white bg-dark-blue">Белый</div>
+                    <div class="text text-l text-red">Красный</div>
+                    <div class="text text-l text-blue">Синий</div>
+                    <div class="text text-l text-dark-blue">Темно-синий</div>
+                    <div class="text text-l text-gray">Серый</div>
+                    <div class="text text-l text-light-gray">Светло-серый</div>
+                </div>
+                <div class="col-6">
+                    <pre>
+            <code class="language-html">
+&lt;div class=&quot;text text-l text-bold&quot;&gt;Примеры цветов текста:&lt;/div&gt;
+&lt;div class=&quot;text text-l text-black&quot;&gt;Черный&lt;/div&gt;
+&lt;div class=&quot;text text-l text-light-black&quot;&gt;Светло-черный&lt;/div&gt;
+&lt;div class=&quot;text text-l text-white bg-dark-blue&quot;&gt;Белый&lt;/div&gt;
+&lt;div class=&quot;text text-l text-red&quot;&gt;Красный&lt;/div&gt;
+&lt;div class=&quot;text text-l text-blue&quot;&gt;Синий&lt;/div&gt;
+&lt;div class=&quot;text text-l text-dark-blue&quot;&gt;Темно-синий&lt;/div&gt;
+&lt;div class=&quot;text text-l text-gray&quot;&gt;Серый&lt;/div&gt;
+&lt;div class=&quot;text text-l text-light-gray&quot;&gt;Светло-серый&lt;/div&gt;
+            </code>
+          </pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Начертание и жирность текста -->
+        <div class="container mb-red" id="Начертание-и-жирность-текста">
+            <div class="row mb-yellow">
+                <div class="col-12">
+                    <h3 class="h3 text-blue mb-cyan">Начертание и жирность текста</h3>
+                    <div class="text text-l">Чтобы установить начертание и жирность текста, также нужно добавить
+                        соответствующий класс.</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="text text-l text-bold">Примеры начертания и жирности текста:</div>
+                    <div class="text text-l text-bold">Жирный текст</div>
+                    <div class="text text-l text-uppercase">Верхний регистр</div>
+                    <div class="text text-l text-lowercase">Нижний регистр</div>
+                </div>
+                <div class="col-6">
+                    <pre>
+            <code class="language-html">
+&lt;div class=&quot;text text-l text-bold&quot;&gt;Жирный текст&lt;/div&gt;
+&lt;div class=&quot;text text-l text-uppercase&quot;&gt;Верхний регистр&lt;/div&gt;
+&lt;div class=&quot;text text-l text-lowercase&quot;&gt;Нижний регистр&lt;/div&gt;
+            </code>
+          </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    //= template/footer.html
+</body>
+
+</html>

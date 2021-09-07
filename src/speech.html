@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/head.html',{
+'title': 'Разговорная выноска / текстовый баллон',
+'description': '',
+'keywords': '',
+'favicon': 'images/favicon.png'
+})
+
+<body>
+    //= template/sidenav.html
+    <div class="main">
+        <div class="container mb-yellow">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="h1">Разговорная выноска / текстовый баллон (.speech)</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Разговорная выноска -->
+        <div class="container mb-yellow">
+            <div class="row">
+                <div class="col-6">
+                    <div class="text text-l">Выноска используется в основном в для иллюстрации речи либо мыслей
+                        персонажа (обычно
+                        в виде слов, редко — картинок). </div>
+                    <pre>
+              <code class="language-html">
+&lt;div&gt;
+    &lt;div class=&quot;speech radius white left__middle down manySpeech&quot;&gt;
+        &lt;p class=&quot;text text-l active&quot;&gt;Надбавки составляют 0% во всех фондах, кроме «Компания – Индекс МосБиржи».
+        &lt;/p&gt;
+        &lt;p class=&quot;text text-l&quot;&gt;Надбавки составляют 0% во всех фондах, кроме «Компания – Индекс МосБиржи».
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;btn btn__primary m btn__block js-nextSpeech&quot;&gt;Далее&lt;/div&gt;
+&lt;/div&gt;
+              </code>
+            </pre>
+                </div>
+                <div class="col-6">
+                    <div>
+                        <div class="speech radius white left__middle down manySpeech">
+                            <p class="text text-l active">Надбавки составляют 0% во всех фондах, кроме «Компания – Индекс
+                                МосБиржи».
+                            </p>
+                            <p class="text text-l">Минимальная сумма — 1 000 рублей при первой и повторных покупках.
+                            </p>
+                        </div>
+                        <div class="btn btn__primary m btn__block js-nextSpeech">Далее</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row mb-yellow">
+                <div class="col-12 css">
+                    <div class="text text-l">Структура выноски состоит из главного блока с классом <code>speech</code> и
+                        дополнительных классов:</div>
+                    <div class="text text-l">
+                        <span class="text-dark-blue">down</span> — устанавливает направление выноски снизу.<br>
+                        <span class="text-dark-blue">up</span> — устанавливает направление выноски сверху.
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-yellow">
+                <div class="col-12">
+                    <div class="text text-l">Классы down и up не могут существовать без классов, которые устанавливают
+                        положение выноски:</div>
+                    <div class="text text-l">
+                        <span class="text-dark-blue">right__top</span> — справа сверху.<br>
+                        <span class="text-dark-blue">right__midldle</span> — справа по центру.<br>
+                        <span class="text-dark-blue">right__bottom</span> — справа снизу.<br>
+                        <span class="text-dark-blue">left__top</span> — слева сверху.<br>
+                        <span class="text-dark-blue">left__middle</span> — слева по центру.<br>
+                        <span class="text-dark-blue">left__bottom</span> — слева снизу.
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-yellow">
+                <div class="col-12">
+                    <div class="text text-l">Цвет выноски:</div>
+                    <div class="text text-l">
+                        По умолчанию цвет заливки серый.<br>
+                        <span class="text-dark-blue">white</span> — устанавливает белый цвет заливки.<br>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-yellow">
+                <div class="col-12">
+                    <div class="text text-l">Закругление блока:</div>
+                    <div class="text text-l">
+                        <span class="text-dark-blue">radius</span> — устанавливает радиус скругления.<br>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 css">
+                    <div class="text text-l">Класс <code>manySpeech</code> предназначен для выноски со сменой текста внутри него, то
+                        есть все блоки будут показаны поочередно по клику на кнопку «Далее». Кнопка обязательно
+                        должна содержать класс <code>btn__block</code> и <code>js-nextSpeech</code>.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    //= template/footer.html
+</body>
+
+</html>

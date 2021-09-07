@@ -1,0 +1,22 @@
+.table {
+  width: 100%;
+  color: $black;
+
+  th,
+  td {
+    padding: 15px 30px;
+    vertical-align: top;
+    border-top: 1px solid $light-gray;
+  }
+
+  thead th {
+    vertical-align: top;
+    background: $light-gray;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid $light-gray;
+  }
+
+  tbody+tbody {
+    border-top: 1px solid $light-gray;
+  }
+}

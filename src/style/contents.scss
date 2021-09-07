@@ -1,0 +1,61 @@
+.contents {
+  &_item {
+    &-list {
+      cursor: pointer;
+      border-bottom: 1px solid #DBE1EE;
+      position: relative;
+      &.disabled {
+        pointer-events: none;
+        color: #ACB6C3;
+        &:after {
+          content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAYAAACEYr13AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEjSURBVHgBtZNBTsMwEEXnOw5sc4QeoT0AoC5RFlAJkLoquQGcoPQEHCFkhVSQCouIZQUcoByhR+i2FHsYV12gQEzdqqN8aRTPPM+MbdAfdv8ybsSsc3GbokT0tJh/XXc77Wk1FjXJEyKWD8UyCHzChEQgrSpEVQF7rG9BPFvMTessPbhy+oRpu7V4f1kVeQGy7ykzP//cqXssPtti1ZIfsILMav4lawFCDMNy3FQkveF3ed5EwtQwOjpCPCKyZJkHQQCgp6ByzcQNGdrgPD26CQE8lK/uePtbz2C3gGH5dum0EcAlKiB38kF218JFengnR5s5Ob8uTpPHfIn/VrCubf8WHsv3iVzLxLIpQhIVop57AtqSyiIyI0D1QwAy3A8mk30Df5ZzCDV81HsAAAAASUVORK5CYII=');
+          position: absolute;
+          height: 20px;
+          width: 16px;
+          top: 16px;
+          right: 20px;
+        }
+
+        &.title {
+          pointer-events: none;
+          color: #ACB6C3;
+        }
+
+        p {
+          color: #ACB6C3;
+        }
+      }
+
+      &_subitem {
+        font-size: 14px;
+        line-height: 21px !important;
+        padding: 0px 0px 10px 25px;
+        border: none;
+        &:after {
+          display: none;
+        }
+      }
+
+      &.title {
+        font-size: 16px;
+        line-height: 24px !important;
+        font-weight: bolder;
+        padding: 25px 0px 25px 0px;
+        color: #1E4BD2;
+        border-bottom: none;
+        margin: 0;
+        &:after {
+          display: none;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 24px !important;
+        padding: 15px 0px 18px 0;
+        margin: auto;
+        color: #1E4BD2;
+      }
+    }
+  }
+}

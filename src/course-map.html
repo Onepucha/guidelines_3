@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/head.html',{
+'title': 'Ветвление / карта курса',
+'description': '',
+'keywords': '',
+'favicon': 'images/favicon.png'
+})
+
+<body>
+  //= template/sidenav.html
+  <div class="main">
+    <div class="container mb-cyan">
+      <div class="row ">
+        <div class="col-12">
+          <h1 class="h1">Ветвление / карта курса</h1>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- Таймлайн -->
+    <div class="container mb-yellow" id="Таймлайн">
+      <div class="row mb-green">
+        <div class="col-12 mb-green">
+          <div class="text text-l mb-pink">В курсе можно сделать нелинейную структуру. Для этого есть специальные
+            кликабельные плитки, при нажатии на которые мы попадаем в другую тему, состоящую из одного или нескольких
+            слайдов.</div>
+          <div class="text text-l mb-pink">После изучения темы мы попадаем обратно на слайд с ветвлением, и кнопка
+            пройденного блока окрашивается в другой цвет. </div>
+          <div class="text text-l">После изучения всех тем кнопка «Продолжить» для перехода на следующий слайд
+            разблокируется.</div>
+        </div>
+        <div class="col-12">
+          <div class="plate--container">
+            <div class="plate plate--icon plate--nav visited" id="navmenu_1"
+              onclick="gotoFrame('Идентификатор фрейма',event);">
+              <img class="plate--img" src="./images/navicon_1.png" />
+              <h4 class="h4 text text-l text-center">Доступ к рынкам
+              </h4>
+            </div>
+            <div class="plate plate--icon plate--nav" id="navmenu_2" onclick="gotoFrame('Идентификатор фрейма',event);">
+              <img class="plate--img" src="./images/navicon_2.png" />
+              <h4 class="h4 text text-l text-center">Маржинальное кредитование
+              </h4>
+            </div>
+            <div class="plate plate--icon plate--nav" id="navmenu_3" onclick="gotoFrame('Идентификатор фрейма',event);">
+              <img class="plate--img" src="./images/navicon_3.png" />
+              <h4 class="h4 text text-l text-center">Аналитика и рекомендации
+              </h4>
+            </div>
+            <div class="plate plate--icon plate--nav" id="navmenu_4" onclick="gotoFrame('Идентификатор фрейма',event);">
+              <img class="plate--img" src="./images/navicon_4.png" />
+              <h4 class="h4 text text-l text-center">Приложения для торговли
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row center">
+        <div class="col-24">
+          <button class="btn__primary nav"
+            onclick="gotoFrame('Идентификатор фрейма',event);setMenuPassed(3);"><span>Продолжить</span>
+            <svg class="icon__right" xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18"
+              fill="none">
+              <path d="M1 1L9 9L1 17" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 mb-green">
+
+        </div>
+        <div class="col-12">
+          <pre>
+            <code class="language-html">
+
+&lt;div class="plate--container">
+  &lt;div class="plate plate--icon plate--nav visited" data-frame="FRAME_37">
+    &lt;img class="plate--img" src="images/navicon_1.png" />
+    &lt;h4 class="h4 text text-l text-center">Доступ к рынкам
+    &lt;/h4>
+  &lt;/div>
+  &lt;div class="plate plate--icon plate--nav visited" data-frame="FRAME_66">
+    &lt;img class="plate--img" src="images/navicon_2.png" />
+    &lt;h4 class="h4 text text-l text-center">Доступ к рынкам
+    &lt;/h4>
+  &lt;/div>
+  &lt;div class="plate plate--icon plate--nav visited" data-frame="FRAME_76">
+    &lt;img class="plate--img" src="images/navicon_3.png" />
+    &lt;h4 class="h4 text text-l text-center">Доступ к рынкам
+    &lt;/h4>
+  &lt;/div>
+  &lt;div class="plate plate--icon plate--nav visited" data-frame="FRAME_82">
+    &lt;img class="plate--img" src="images/navicon_4.png" />
+    &lt;h4 class="h4 text text-l text-center">Доступ к рынкам
+    &lt;/h4>
+  &lt;/div>
+&lt;/div>
+
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <!-- Описание -->
+      <div class="row mb-cyan">
+        <div class="col-12">
+          <h1 class="h1">Описание</h1>
+        </div>
+      </div>
+      <div class="row mb-red">
+        <div class="col-12 css">
+          <div class="text text-l">Для перехода на нужный фрейм заполните дата атрибут <code>data-frame="Фрейм_для_перехода"</code>. Чтобы сделать плитку активной, нужно удалить класс <code>visited</code> в строке <code>plate plate--icon plate--nav visited</code>.</div>
+        </div>
+      </div>
+
+
+      <!-- Инициализация -->
+      <div class="row mb-cyan">
+        <div class="col-12">
+          <h1 class="h1">Инициализация</h1>
+        </div>
+      </div>
+      <div class="row mb-pink">
+        <div class="col-12 css">
+          <div class="text text-l">Чтобы инициализировать карту перемещений, нужно навесить событие на заблокированную кнопку с идентификатором  <code>TXT_№</code>. Для этого в действиях объекта на вкладке «После показа» выберите действие <code>javascript</code> и внутри выполните инициализацию.</div>
+        </div>
+      </div>
+      <div class="row mb-pink">
+        <div class="col-12">
+                    <pre>
+            <code class="language-javascript">
+courseMap();
+            </code>
+        </pre>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  //= template/footer.html
+</body>
+
+</html>

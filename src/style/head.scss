@@ -1,0 +1,133 @@
+.header {
+    position: relative;
+    border: none;
+    overflow: hidden;
+    transition: background 0.4s ease-in-out;
+    width: 100%;
+    height: 72px;
+
+    &.is-hidden {
+        opacity: 0;
+        transition: transform 0.4s, opacity 0.2s;
+    }
+
+    &.is-visible {
+        opacity: 1;
+        transition: transform 0.4s, opacity 0.2s;
+    }
+
+    &.fixed-top {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .mount {
+        height: 50px;
+        background: $dark-blue;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    &__top {
+        margin-top: 10px;
+        background: $white;
+        padding: 0 15px;
+        height: 50px;
+        box-shadow: 0px 2px 10px rgba(18, 50, 116, 0.2);
+    }
+
+    &__link {
+        display: inline-block;
+        position: relative;
+        width: 63px;
+        height: 23px;
+        cursor: default;
+        margin: 0 35px 0 10px;
+
+        &::after {
+            content: "";
+        }
+    }
+
+    &__img {
+        width: 63px;
+        height: 23px;
+    }
+
+    &__course-name {
+        position: relative;
+        font-size: $fs14;
+        line-height: $lh21;
+        color: rgba($black, 0.65);
+        padding-left: 25px;
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 1px;
+            background: #DBE1EE;
+
+        }
+    }
+
+    &__slide-name {
+        font-size: 10px;
+        line-height: 14px;
+        color: $light-white;
+        padding: 5px 0px;
+    }
+
+    &__wrapper {
+        width: 100%;
+        background: $blue;
+
+        &-main {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.35);
+        }
+
+        &-progress {
+            position: relative;
+            width: 100%;
+            height: 3px;
+            left: 0px;
+            background: $white;
+        }
+    }
+
+    &-icon-menu {
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        padding: 8px 4px;
+        margin: 0 15px 0 0;
+
+        &__item {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: $white;
+            margin-bottom: 5px;
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+
+        &:hover .header-icon-menu__item {
+            background: $light-white;
+        }
+
+    }
+}

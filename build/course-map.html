@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1280px, initial-scale=1.0">
+  <meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <!-- <link rel="stylesheet" href="./css/mono-blue.css"> -->
+  <link rel="stylesheet" href="./css/main.min.css" />
+
+  <title>Ветвление / карта курса</title>
+
+  <header class="header fixed-top">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-24 col-xs-14">
+          <div id="lmm-menu">
+            <lmm-menu :glossary="glossary" :materials="materials" :menu-items="menuItems" :show-content="true"
+              :show-glossary="true" :show-materials="true">
+            </lmm-menu>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container container-header">
+      <div class="mount"></div>
+      <div class="header__top">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex align-items-center">
+              <p class="header__course-name">Гайдлайн</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</head>
+
+
+<body>
+  <div class="sidenav">
+      <div class="sidenav-left">
+          <div class="sidenav-left-content">
+              <div class="sidenav-left-content--item">
+                  <a class="first" data-href="tabs.html" href="./tabs.html">Вкладки / табы (.tabs)</a>
+              </div>
+              <div class="sidenav-left-content--item">
+                  <a data-href="timeline.html" href="./timeline.html">Таймлайн</a>
+              </div>
+              <div class="sidenav-left-content--item">
+                  <a data-href="speech.html" href="./speech.html">Разговорная выноска / текстовый баллон (.speech)</a>
+              </div>
+              <div class="sidenav-left-content--item">
+                  <a data-href="buttons.html" href="./buttons.html">Кнопки (.btn)</a>
+              </div>
+              <div class="sidenav-left-content--item">
+                  <a data-href="modal.html" href="./modal.html">Модальные окна (.modal)</a>
+              </div>
+              <div class="sidenav-left-content--item">
+                  <a data-href="features.html" href="./features.html">Переворачивающиеся карточки (features)</a>
+              </div>
+              <div class="sidenav-left-content--item">
+                  <a data-href="text.html" href="./text.html">Тексты (.text-s/m/l/xl/xxl)</a>
+              </div>
+              <div class="sidenav-left-content--item">
+                  <a data-href="list.html" href="./list.html">Списки (.list__ul / .list__ol)</a>
+              </div>
+              <div class="sidenav-left-content--item">
+                  <a data-href="plate.html" href="./plate.html">Плитка с текстом, иконкой и разделителем</a>
+              </div>
+              <div class="sidenav-left-content--item">
+                  <a data-href="table.html" href="./table.html">Таблица (.table)</a>
+              </div>
+              <div class="sidenav-left-content--item">
+                  <a data-href="accordion.html" href="./accordion.html">Раскрывающийся список (.accordion)</a>
+              </div>
+              <div class="sidenav-left-content--item">
+                  <a data-href="slider.html" href="./slider.html">Карусель / галерея (.slider_item)</a>
+              </div>
+              <div class="sidenav-left-content--item">
+                  <a data-href="course-map.html" href="./course-map.html">Ветвление / карта курса</a>
+              </div>
+              <div class="sidenav-left-content--item">
+                  <a data-href="test.html" href="./test.html">Тестирование</a>
+              </div>
+              <div class="sidenav-left-content--item">
+                  <a data-href="nav-curse.html" href="./nav-curse.html">Меню курса</a>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="main">
+    <div class="container mb-cyan">
+      <div class="row ">
+        <div class="col-12">
+          <h1 class="h1">Ветвление / карта курса</h1>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- Таймлайн -->
+    <div class="container mb-yellow" id="Таймлайн">
+      <div class="row mb-green">
+        <div class="col-12 mb-green">
+          <div class="text text-l mb-pink">В курсе можно сделать нелинейную структуру. Для этого есть специальные
+            кликабельные плитки, при нажатии на которые мы попадаем в другую тему, состоящую из одного или нескольких
+            слайдов.</div>
+          <div class="text text-l mb-pink">После изучения темы мы попадаем обратно на слайд с ветвлением, и кнопка
+            пройденного блока окрашивается в другой цвет. </div>
+          <div class="text text-l">После изучения всех тем кнопка «Продолжить» для перехода на следующий слайд
+            разблокируется.</div>
+        </div>
+        <div class="col-12">
+          <div class="plate--container">
+            <div class="plate plate--icon plate--nav visited" id="navmenu_1"
+              onclick="gotoFrame('Идентификатор фрейма',event);">
+              <img class="plate--img" src="./images/navicon_1.png" />
+              <h4 class="h4 text text-l text-center">Доступ к рынкам
+              </h4>
+            </div>
+            <div class="plate plate--icon plate--nav" id="navmenu_2" onclick="gotoFrame('Идентификатор фрейма',event);">
+              <img class="plate--img" src="./images/navicon_2.png" />
+              <h4 class="h4 text text-l text-center">Маржинальное кредитование
+              </h4>
+            </div>
+            <div class="plate plate--icon plate--nav" id="navmenu_3" onclick="gotoFrame('Идентификатор фрейма',event);">
+              <img class="plate--img" src="./images/navicon_3.png" />
+              <h4 class="h4 text text-l text-center">Аналитика и рекомендации
+              </h4>
+            </div>
+            <div class="plate plate--icon plate--nav" id="navmenu_4" onclick="gotoFrame('Идентификатор фрейма',event);">
+              <img class="plate--img" src="./images/navicon_4.png" />
+              <h4 class="h4 text text-l text-center">Приложения для торговли
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row center">
+        <div class="col-24">
+          <button class="btn__primary nav"
+            onclick="gotoFrame('Идентификатор фрейма',event);setMenuPassed(3);"><span>Продолжить</span>
+            <svg class="icon__right" xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18"
+              fill="none">
+              <path d="M1 1L9 9L1 17" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 mb-green">
+
+        </div>
+        <div class="col-12">
+          <pre>
+            <code class="language-html">
+
+&lt;div class="plate--container">
+  &lt;div class="plate plate--icon plate--nav visited" data-frame="FRAME_37">
+    &lt;img class="plate--img" src="images/navicon_1.png" />
+    &lt;h4 class="h4 text text-l text-center">Доступ к рынкам
+    &lt;/h4>
+  &lt;/div>
+  &lt;div class="plate plate--icon plate--nav visited" data-frame="FRAME_66">
+    &lt;img class="plate--img" src="images/navicon_2.png" />
+    &lt;h4 class="h4 text text-l text-center">Доступ к рынкам
+    &lt;/h4>
+  &lt;/div>
+  &lt;div class="plate plate--icon plate--nav visited" data-frame="FRAME_76">
+    &lt;img class="plate--img" src="images/navicon_3.png" />
+    &lt;h4 class="h4 text text-l text-center">Доступ к рынкам
+    &lt;/h4>
+  &lt;/div>
+  &lt;div class="plate plate--icon plate--nav visited" data-frame="FRAME_82">
+    &lt;img class="plate--img" src="images/navicon_4.png" />
+    &lt;h4 class="h4 text text-l text-center">Доступ к рынкам
+    &lt;/h4>
+  &lt;/div>
+&lt;/div>
+
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <!-- Описание -->
+      <div class="row mb-cyan">
+        <div class="col-12">
+          <h1 class="h1">Описание</h1>
+        </div>
+      </div>
+      <div class="row mb-red">
+        <div class="col-12 css">
+          <div class="text text-l">Для перехода на нужный фрейм заполните дата атрибут <code>data-frame="Фрейм_для_перехода"</code>. Чтобы сделать плитку активной, нужно удалить класс <code>visited</code> в строке <code>plate plate--icon plate--nav visited</code>.</div>
+        </div>
+      </div>
+
+
+      <!-- Инициализация -->
+      <div class="row mb-cyan">
+        <div class="col-12">
+          <h1 class="h1">Инициализация</h1>
+        </div>
+      </div>
+      <div class="row mb-pink">
+        <div class="col-12 css">
+          <div class="text text-l">Чтобы инициализировать карту перемещений, нужно навесить событие на заблокированную кнопку с идентификатором  <code>TXT_№</code>. Для этого в действиях объекта на вкладке «После показа» выберите действие <code>javascript</code> и внутри выполните инициализацию.</div>
+        </div>
+      </div>
+      <div class="row mb-pink">
+        <div class="col-12">
+                    <pre>
+            <code class="language-javascript">
+courseMap();
+            </code>
+        </pre>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="./js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+
+</html>

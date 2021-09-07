@@ -1,0 +1,260 @@
+/* Speach */
+.speech {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    background: #DBE1EE;
+    padding: 20px 30px;
+    color: $black;
+    font-size: 16px;
+    line-height: 24px;
+    border: 1px solid $speech-border-color;
+    transition: 0.3s;
+
+    &.manySpeech {
+        p{
+            display: none;
+            
+            &:first-child {
+                display: block;
+            }
+        }
+
+    }
+
+    &.radius {
+        border-radius: 5px;
+    }
+
+    &.white {
+        box-shadow: 0px 5px 50px rgba(172, 182, 195, 0.65);
+        border-color: $white;
+        background: $white;
+
+        &.top__left::after,
+        &.top__center::after,
+        &.top__right::after {
+            border-bottom-color: $white;
+        }
+
+        &.right__top::after,
+        &.right__midldle::after,
+        &.right__bottom::after {
+            border-left-color: $white;
+        }
+
+        &.bottom__left::after,
+        &.bottom__center::after,
+        &.bottom__right::after {
+            border-top-color: $white;
+        }
+
+        &.left__top::after,
+        &.left__middle::after,
+        &.left__bottom::after {
+            border-right-color: $white;
+        }
+    }
+
+    &.top__left,
+    &.top__center,
+    &.top__right {
+        margin-top: 16px;
+    }
+
+    &.right__top,
+    &.right__midldle,
+    &.right__bottom {
+    }
+
+    &.bottom__left,
+    &.bottom__center,
+    &.bottom__right {
+        margin-bottom: 16px;
+    }
+
+    &.left__top,
+    &.left__middle,
+    &.left__bottom {
+    }
+
+    &.left__top {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            border: 16px solid transparent;
+            border-right-color: $speech-tail-color;
+            border-left: 0;
+            margin-left: -16px;
+            margin-top: 16px;
+        }
+
+        &.up {
+            &::after {
+                border-top: 0;
+            }
+        }
+
+        &.down {
+            &::after {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    &.left__middle {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 0;
+            height: 0;
+            border: 16px solid transparent;
+            border-right-color: $speech-tail-color;
+            border-left: 0;
+            margin-left: -16px;
+            margin-top: -8px;
+        }
+
+        &.up {
+            &::after {
+                border-top: 0;
+            }
+        }
+
+        &.down {
+            &::after {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    &.left__bottom {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border: 16px solid transparent;
+            border-right-color: $speech-tail-color;
+            border-left: 0;
+            margin-left: -16px;
+            margin-bottom: 16px;
+        }
+
+        &.up {
+            &::after {
+                border-top: 0;
+            }
+        }
+
+        &.down {
+            &::after {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    &.right__top {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            border: 16px solid transparent;
+            border-left-color: $speech-tail-color;
+            border-right: 0;
+            margin-right: -16px;
+            margin-top: 25px;
+        }
+
+        &.up {
+            &::after {
+                border-top: 0;
+            }
+        }
+
+        &.down {
+            &::after {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    &.right__middle {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 0;
+            height: 0;
+            border: 16px solid transparent;
+            border-left-color: $speech-tail-color;
+            border-right: 0;
+            margin-right: -16px;
+            margin-top: -8px;
+        }
+
+        &.up {
+            &::after {
+                border-top: 0;
+            }
+        }
+
+        &.down {
+            &::after {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    &.right__bottom {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border: 16px solid transparent;
+            border-left-color: $speech-tail-color;
+            border-right: 0;
+            margin-right: -16px;
+            margin-bottom: 25px;
+        }
+
+        &.up {
+            &::after {
+                border-top: 0;
+            }
+        }
+
+        &.down {
+            &::after {
+                border-bottom: 0;
+            }
+        }
+    }
+}

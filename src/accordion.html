@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/head.html',{
+'title': 'Раскрывающийся список',
+'description': '',
+'keywords': '',
+'favicon': 'images/favicon.png'
+})
+
+<body>
+    //= template/sidenav.html
+    <div class="main">
+        <div class="container mb-yellow">
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <h1 class="h1 mb-cyan">Раскрывающийся список (.accordion)</h1>
+                    <div class="text text-l">Раскрывающийся список — это элемент, который раскрывается при нажатии.
+                        Позволяет
+                        скрывать часть информации на слайде до тех пор, пока она не пригодится. </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <ul class="list__ul">
+                        <li class="list__ul-docs"><a class="scrollto" href="#Структура">Структура</a></li>
+                        <li class="list__ul-docs"><a class="scrollto" href="#Инициализация">Инициализация</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Раскрывающийся список -->
+        <div class="container mb-yellow">
+            <div class="row mb-yellow">
+                <div class="col-12">
+                    <div class="accordion">
+                        <h3 class="accordion__title">Пункт 1</h3>
+                        <div class="accordion__content">
+                            <div class="text text-s">Описание пункта 1</div>
+                        </div>
+                        <h3 class="accordion__title">Пункт 2</h3>
+                        <div class="accordion__content">
+                            <div class="text text-s">Описание пункта 2</div>
+                        </div>
+                        <h3 class="accordion__title">Пункт 3</h3>
+                        <div class="accordion__content">
+                            <div class="text text-s">Описание пункта 3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <pre>
+                <code class="language-html">
+&lt;div class=&quot;accordion&quot;&gt;
+    &lt;h3 class=&quot;accordion__title&quot;&gt;Пункт 1&lt;/h3&gt;
+    &lt;div class=&quot;accordion__content&quot;&gt;
+        &lt;div class=&quot;text text-s&quot;&gt;Описание пункта 1&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;h3 class=&quot;accordion__title&quot;&gt;Пункт 2&lt;/h3&gt;
+    &lt;div class=&quot;accordion__content&quot;&gt;
+        &lt;div class=&quot;text text-s&quot;&gt;Описание пункта 2&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;h3 class=&quot;accordion__title&quot;&gt;Пункт 3&lt;/h3&gt;
+    &lt;div class=&quot;accordion__content&quot;&gt;
+        &lt;div class=&quot;text text-s&quot;&gt;Описание пункта 3&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                </code>
+              </pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Структура -->
+        <div class="container mb-red" id="Структура">
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <h1 class="h1">Структура</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 css">
+                    <div class="text text-l">Структура раскрывающегося списка состоит из неупорядоченного списка вкладок
+                        <code>accordion__title</code>, который соответствует количеству блоков с классом
+                        <code>accordion__content</code>.</div>
+                    <div class="text text-l">У каждого блока с классом <code>accordion</code> рядом должен быть блок с
+                        классом <code>accordion__title</code> и <code>accordion__content</code>. Если нажать на вкладку,
+                        становится видимым только тот контейнер, к которому она относится.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Инициализация -->
+        <div class="container mb-red" id="Инициализация">
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <h1 class="h1">Инициализация</h1>
+                </div>
+            </div>
+            <div class="row mb-pink">
+                <div class="col-12 css">
+                    <div class="text text-l">Чтобы инициализировать (запустить) раскрывающийся список, нужно на объекте
+                        <code>TXT_№</code> в действиях объекта на вкладке «После показа» выбрать действие
+                        <code>javascript</code> и внутри выполнить инициализацию.</div>
+                    <div class="text text-l text-bold">Инициализация выглядит следующем образом:</div>
+                </div>
+            </div>
+            <div class="row mb-pink">
+                <div class="col-12">
+                    <pre>
+            <code class="language-javascript">
+$(".accordion").accordion({ collapsible: true, heightStyle: "content", active: false});
+            </code>
+        </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    //= template/footer.html
+</body>
+
+</html>

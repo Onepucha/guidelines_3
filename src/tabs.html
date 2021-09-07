@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/head.html',{
+'title': 'Вкладки / табы',
+'description': '',
+'keywords': '',
+'favicon': 'images/favicon.png'
+})
+
+<body>
+    //= template/sidenav.html
+    <div class="main">
+        <div class="container mb-blue">
+            <div class="row mb-red">
+                <div class="col-12">
+                    <h1 class="h1 mb-cyan">Вкладки / табы (.tabs)</h1>
+                    <div class="text text-l">Набор вкладок содержит несколько страниц, на которые можно поместить другие
+                        элементы,
+                        такие как текстовые поля или картинки. Когда пользователь нажимает соответствующую вкладку, эта
+                        страница
+                        становится активной.</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <ul class="list__ul">
+                        <li class="list__ul-docs"><a class="scrollto" href="#Вертикальные-вкладки-слева">Вертикальные
+                                вкладки
+                                слева</a></li>
+                        <li class="list__ul-docs"><a class="scrollto" href="#Вертикальные-вкладки-справа">Вертикальные
+                                вкладки
+                                справа</a></li>
+                        <li class="list__ul-docs"><a class="scrollto"
+                                href="#Горизонтальные-вкладки-сверху">Горизонтальные вкладки
+                                сверху</a></li>
+                        <li class="list__ul-docs"><a class="scrollto"
+                                href="#Горизонтальные-вкладки-снизу">Горизонтальные вкладки
+                                снизу</a></li>
+                        <li class="list__ul-docs"><a class="scrollto" href="#Структура">Структура</a></li>
+                        <li class="list__ul-docs"><a class="scrollto"
+                                href="#Предварительный-выбор-вкладки">Предварительный выбор
+                                вкладки</a></li>
+                        <li class="list__ul-docs"><a class="scrollto" href="#Инициализация-запуск-вкладок">Инициализация
+                                (запуск)
+                                вкладок</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Вертикальные вкладки слева -->
+        <div class="container mb-red" id="Вертикальные-вкладки-слева">
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <h1 class="h1">Вертикальные вкладки слева <span class="text-blue">tabs
+                            tabs--vertical</span></h1>
+                </div>
+            </div>
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <div class="tabs tabs--vertical">
+                        <div class="tab__nav ">
+                            <a class="tab__links tab__links-list" data-href="#tab-content-1"><span>1</span>Как работает ПИФ?</a>
+                            <a class="tab__links tab__links-list" data-href="#tab-content-2"><span>2</span>Зачем инвестировать в
+                                инвестиционные
+                                фонды?</a>
+                            <a class="tab__links tab__links-list" data-href="#tab-content-3"><span>3</span>Кто управляет фондом?</a>
+                            <a class="tab__links tab__links-list" data-href="#tab-content-4"><span>4</span>Кому подойдет ПИФ?</a>
+                        </div>
+                        <div class="tab__content">
+                            <!-- Tab content -->
+                            <div id="tab-content-1" class="tab__item">
+                                <h4 class="h4">Выслушать</h4>
+                                <ul class="list__ul text text-m">
+                                    <li class="list__ul-item">Проявите заинтересованность.</li>
+                                    <li class="list__ul-item">Подкрепите вашу заинтересованность техникой активного
+                                        слушания.</li>
+                                </ul>
+                            </div>
+                            <div id="tab-content-2" class="tab__item">
+                                <h4 class="h4">Амортизировать</h4>
+                                <ul class="list__ul text text-m">
+                                    <li class="list__ul-item">Начните с имени Клиента.</li>
+                                    <li class="list__ul-item">Используйте способы амортизации возражений.</li>
+                                </ul>
+                            </div>
+                            <div id="tab-content-3" class="tab__item">
+                                <h4 class="h4">Конкретизировать</h4>
+                                <p class="text text-m">Задайте вопрос Клиенту с целью прояснить его возражение.</p>
+                            </div>
+                            <div id="tab-content-4" class="tab__item">
+                                <h4 class="h4">Аргументировать</h4>
+                                <ul class="list__ul text text-m">
+                                    <li class="list__ul-item">Озвучьте подходящий аргумент.</li>
+                                    <li class="list__ul-item">Говорите о том, что хочет услышать Клиент.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="highlight">
+                        <pre>
+                <code class="language-html">
+&lt;div class=&quot;tabs tabs--vertical&quot;&gt;
+  &lt;div class=&quot;tab__nav &quot;&gt;
+    &lt;a class=&quot;tab__links&quot; data-href=&quot;#tab-content-1&quot;&gt;&lt;span&gt;1&lt;/span&gt;Как работает ПИФ?&lt;/a&gt;
+    &lt;a class=&quot;tab__links&quot; data-href=&quot;#tab-content-2&quot;&gt;&lt;span&gt;2&lt;/span&gt;Зачем инвестировать в инвестиционные
+      фонды?&lt;/a&gt;
+    &lt;a class=&quot;tab__links&quot; data-href=&quot;#tab-content-3&quot;&gt;&lt;span&gt;3&lt;/span&gt;Кто управляет фондом?&lt;/a&gt;
+    &lt;a class=&quot;tab__links&quot; data-href=&quot;#tab-content-4&quot;&gt;&lt;span&gt;4&lt;/span&gt;Кому подойдет ПИФ?&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tab__content&quot;&gt;
+    &lt;!-- Tab content --&gt;
+    &lt;div id=&quot;tab-content-1&quot; class=&quot;tab__item&quot;&gt;
+      &lt;h4 class=&quot;h4&quot;&gt;Выслушать&lt;/h4&gt;
+      &lt;ul class=&quot;list__ul text text-m&quot;&gt;
+        &lt;li class=&quot;list__ul-item&quot;&gt;Проявите заинтересованность.&lt;/li&gt;
+        &lt;li class=&quot;list__ul-item&quot;&gt;Подкрепите вашу заинтересованность техникой активного слушания.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;tab-content-2&quot; class=&quot;tab__item&quot;&gt;
+      &lt;h4 class=&quot;h4&quot;&gt;Амортизировать&lt;/h4&gt;
+      &lt;ul class=&quot;list__ul text text-m&quot;&gt;
+        &lt;li class=&quot;list__ul-item&quot;&gt;Начните с имени Клиента.&lt;/li&gt;
+        &lt;li class=&quot;list__ul-item&quot;&gt;Используйте способы амортизации возражений.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;tab-content-3&quot; class=&quot;tab__item&quot;&gt;
+      &lt;h4 class=&quot;h4&quot;&gt;Конкретизировать&lt;/h4&gt;
+      &lt;p class=&quot;text text-m&quot;&gt;Задайте вопрос Клиенту с целью прояснить его возражение.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;tab-content-4&quot; class=&quot;tab__item&quot;&gt;
+      &lt;h4 class=&quot;h4&quot;&gt;Аргументировать&lt;/h4&gt;
+      &lt;ul class=&quot;list__ul text text-m&quot;&gt;
+        &lt;li class=&quot;list__ul-item&quot;&gt;Озвучьте подходящий аргумент.&lt;/li&gt;
+        &lt;li class=&quot;list__ul-item&quot;&gt;Говорите о том, что хочет услышать Клиент.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                </code>
+              </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Вертикальные вкладки справа -->
+        <div class="container mb-red" id="Вертикальные-вкладки-справа">
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <h1 class="h1">Вертикальные вкладки справа <span class="text-blue">tabs
+                            tabs--vertical revert</span></h1>
+                </div>
+            </div>
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <div class="tabs tabs--vertical revert">
+                        <div class="tab__nav ">
+                            <a class="tab__links tab__links-list" data-href="#tab-content-5"><span>1</span>Как работает ПИФ?</a>
+                            <a class="tab__links tab__links-list" data-href="#tab-content-6"><span>2</span>Зачем инвестировать в
+                                инвестиционные
+                                фонды?</a>
+                            <a class="tab__links tab__links-list" data-href="#tab-content-7"><span>3</span>Кто управляет фондом?</a>
+                            <a class="tab__links tab__links-list" data-href="#tab-content-8"><span>4</span>Кому подойдет ПИФ?</a>
+                        </div>
+                        <div class="tab__content">
+                            <!-- Tab content -->
+                            <div id="tab-content-5" class="tab__item">
+                                <h4 class="h4">Выслушать</h4>
+                                <ul class="list__ul text text-m">
+                                    <li class="list__ul-item">Проявите заинтересованность.</li>
+                                    <li class="list__ul-item">Подкрепите вашу заинтересованность техникой активного
+                                        слушания.</li>
+                                </ul>
+                            </div>
+                            <div id="tab-content-6" class="tab__item">
+                                <h4 class="h4">Амортизировать</h4>
+                                <ul class="list__ul text text-m">
+                                    <li class="list__ul-item">Начните с имени Клиента.</li>
+                                    <li class="list__ul-item">Используйте способы амортизации возражений.</li>
+                                </ul>
+                            </div>
+                            <div id="tab-content-7" class="tab__item">
+                                <h4 class="h4">Конкретизировать</h4>
+                                <p class="text text-m">Задайте вопрос Клиенту с целью прояснить его возражение.</p>
+                            </div>
+                            <div id="tab-content-8" class="tab__item">
+                                <h4 class="h4">Аргументировать</h4>
+                                <ul class="list__ul text text-m">
+                                    <li class="list__ul-item">Озвучьте подходящий аргумент.</li>
+                                    <li class="list__ul-item">Говорите о том, что хочет услышать Клиент.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <pre>
+                <code class="language-html">
+&lt;div class=&quot;tabs tabs--vertical revert&quot;&gt;
+  &lt;div class=&quot;tab__nav &quot;&gt;
+    &lt;a class=&quot;tab__links&quot; data-href=&quot;#tab-content-5&quot;&gt;&lt;span&gt;1&lt;/span&gt;Как работает ПИФ?&lt;/a&gt;
+    &lt;a class=&quot;tab__links&quot; data-href=&quot;#tab-content-6&quot;&gt;&lt;span&gt;2&lt;/span&gt;Зачем инвестировать в инвестиционные
+      фонды?&lt;/a&gt;
+    &lt;a class=&quot;tab__links&quot; data-href=&quot;#tab-content-7&quot;&gt;&lt;span&gt;3&lt;/span&gt;Кто управляет фондом?&lt;/a&gt;
+    &lt;a class=&quot;tab__links&quot; data-href=&quot;#tab-content-8&quot;&gt;&lt;span&gt;4&lt;/span&gt;Кому подойдет ПИФ?&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tab__content&quot;&gt;
+    &lt;!-- Tab content --&gt;
+    &lt;div id=&quot;tab-content-5&quot; class=&quot;tab__item&quot;&gt;
+      &lt;h4 class=&quot;h4&quot;&gt;Выслушать&lt;/h4&gt;
+      &lt;ul class=&quot;list__ul text text-m&quot;&gt;
+        &lt;li class=&quot;list__ul-item&quot;&gt;Проявите заинтересованность.&lt;/li&gt;
+        &lt;li class=&quot;list__ul-item&quot;&gt;Подкрепите вашу заинтересованность техникой активного слушания.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;tab-content-6&quot; class=&quot;tab__item&quot;&gt;
+      &lt;h4 class=&quot;h4&quot;&gt;Амортизировать&lt;/h4&gt;
+      &lt;ul class=&quot;list__ul text text-m&quot;&gt;
+        &lt;li class=&quot;list__ul-item&quot;&gt;Начните с имени Клиента.&lt;/li&gt;
+        &lt;li class=&quot;list__ul-item&quot;&gt;Используйте способы амортизации возражений.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;tab-content-7&quot; class=&quot;tab__item&quot;&gt;
+      &lt;h4 class=&quot;h4&quot;&gt;Конкретизировать&lt;/h4&gt;
+      &lt;p class=&quot;text text-m&quot;&gt;Задайте вопрос Клиенту с целью прояснить его возражение.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;tab-content-8&quot; class=&quot;tab__item&quot;&gt;
+      &lt;h4 class=&quot;h4&quot;&gt;Аргументировать&lt;/h4&gt;
+      &lt;ul class=&quot;list__ul text text-m&quot;&gt;
+        &lt;li class=&quot;list__ul-item&quot;&gt;Озвучьте подходящий аргумент.&lt;/li&gt;
+        &lt;li class=&quot;list__ul-item&quot;&gt;Говорите о том, что хочет услышать Клиент.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                </code>
+              </pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Горизонтальные вкладки сверху -->
+        <div class="container mb-red" id="Горизонтальные-вкладки-сверху">
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <h1 class="h1">Горизонтальные вкладки сверху <span class="text-blue">tabs tabs--horizontal</span>
+                    </h1>
+                </div>
+            </div>
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <div class="tabs tabs--horizontal">
+                        <div class="tab__nav ">
+                            <a class="tab__links" data-href="#tab-content-9">Кассеты ПТК, сформированные для последующей
+                                загрузки</a>
+                            <a class="tab__links" data-href="#tab-content-10">Наличные деньги, подготовленные для
+                                доставки</a>
+                        </div>
+                        <div class="tab__content">
+                            <!-- Tab content -->
+                            <div id="tab-content-9" class="tab__item">
+                                <h4 class="h4">Выслушать</h4>
+                                <ul class="list__ul text text-m">
+                                    <li class="list__ul-item">Проявите заинтересованность.</li>
+                                    <li class="list__ul-item">Подкрепите вашу заинтересованность техникой активного
+                                        слушания.</li>
+                                </ul>
+                            </div>
+                            <div id="tab-content-10" class="tab__item">
+                                <h4 class="h4">Амортизировать</h4>
+                                <ul class="list__ul text text-m">
+                                    <li class="list__ul-item">Начните с имени Клиента.</li>
+                                    <li class="list__ul-item">Используйте способы амортизации возражений.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <pre>
+              <code class="language-html">
+&lt;div class=&quot;tabs tabs--horizontal&quot;&gt;
+  &lt;div class=&quot;tab__nav &quot;&gt;
+    &lt;a class=&quot;tab__links&quot; data-href=&quot;#tab-content-9&quot;&gt;Кассеты ПТК, сформированные для последующей загрузки&lt;/a&gt;
+    &lt;a class=&quot;tab__links&quot; data-href=&quot;#tab-content-10&quot;&gt;Наличные деньги, подготовленные для доставки&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tab__content&quot;&gt;
+    &lt;!-- Tab content --&gt;
+    &lt;div id=&quot;tab-content-9&quot; class=&quot;tab__item&quot;&gt;
+      &lt;h4 class=&quot;h4&quot;&gt;Выслушать&lt;/h4&gt;
+      &lt;ul class=&quot;list__ul text text-m&quot;&gt;
+        &lt;li class=&quot;list__ul-item&quot;&gt;Проявите заинтересованность.&lt;/li&gt;
+        &lt;li class=&quot;list__ul-item&quot;&gt;Подкрепите вашу заинтересованность техникой активного слушания.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;tab-content-10&quot; class=&quot;tab__item&quot;&gt;
+      &lt;h4 class=&quot;h4&quot;&gt;Амортизировать&lt;/h4&gt;
+      &lt;ul class=&quot;list__ul text text-m&quot;&gt;
+        &lt;li class=&quot;list__ul-item&quot;&gt;Начните с имени Клиента.&lt;/li&gt;
+        &lt;li class=&quot;list__ul-item&quot;&gt;Используйте способы амортизации возражений.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+              </code>
+            </pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Горизонтальные вкладки снизу -->
+        <div class="container mb-red" id="Горизонтальные-вкладки-снизу">
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <h1 class="h1">Горизонтальные вкладки снизу <span class="text-blue">tabs tabs--horizontal
+                            revert</span></h1>
+                </div>
+            </div>
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <div class="tabs tabs--horizontal revert">
+                        <div class="tab__nav ">
+                            <a class="tab__links" data-href="#tab-content-11">Кассеты ПТК, сформированные для
+                                последующей загрузки</a>
+                            <a class="tab__links" data-href="#tab-content-12">Наличные деньги, подготовленные для
+                                доставки</a>
+                        </div>
+                        <div class="tab__content">
+                            <!-- Tab content -->
+                            <div id="tab-content-11" class="tab__item">
+                                <h4 class="h4">Выслушать</h4>
+                                <ul class="list__ul text text-m">
+                                    <li class="list__ul-item">Проявите заинтересованность.</li>
+                                    <li class="list__ul-item">Подкрепите вашу заинтересованность техникой активного
+                                        слушания.</li>
+                                </ul>
+                            </div>
+                            <div id="tab-content-12" class="tab__item">
+                                <h4 class="h4">Амортизировать</h4>
+                                <ul class="list__ul text text-m">
+                                    <li class="list__ul-item">Начните с имени Клиента.</li>
+                                    <li class="list__ul-item">Используйте способы амортизации возражений.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <pre>
+              <code class="language-html">
+&lt;div class=&quot;tabs tabs--horizontal revert&quot;&gt;
+  &lt;div class=&quot;tab__nav &quot;&gt;
+    &lt;a class=&quot;tab__links&quot; data-href=&quot;#tab-content-11&quot;&gt;Кассеты ПТК, сформированные для последующей загрузки&lt;/a&gt;
+    &lt;a class=&quot;tab__links&quot; data-href=&quot;#tab-content-12&quot;&gt;Наличные деньги, подготовленные для доставки&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tab__content&quot;&gt;
+    &lt;!-- Tab content --&gt;
+    &lt;div id=&quot;tab-content-11&quot; class=&quot;tab__item&quot;&gt;
+      &lt;h4 class=&quot;h4&quot;&gt;Выслушать&lt;/h4&gt;
+      &lt;ul class=&quot;list__ul text text-m&quot;&gt;
+        &lt;li class=&quot;list__ul-item&quot;&gt;Проявите заинтересованность.&lt;/li&gt;
+        &lt;li class=&quot;list__ul-item&quot;&gt;Подкрепите вашу заинтересованность техникой активного слушания.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;tab-content-12&quot; class=&quot;tab__item&quot;&gt;
+      &lt;h4 class=&quot;h4&quot;&gt;Амортизировать&lt;/h4&gt;
+      &lt;ul class=&quot;list__ul text text-m&quot;&gt;
+        &lt;li class=&quot;list__ul-item&quot;&gt;Начните с имени Клиента.&lt;/li&gt;
+        &lt;li class=&quot;list__ul-item&quot;&gt;Используйте способы амортизации возражений.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+              </code>
+            </pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Структура -->
+        <div class="container mb-red" id="Структура">
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <h1 class="h1">Структура</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 css">
+                    <div class="text text-l">В блоке с классом <code>tab__nav</code> содержатся вкладки, каждая из которых имеет параметр <code>data-href</code>, соответствующий ее идентификатору (<code>id</code>).</div>
+                    <div class="text text-l">При нажатии на вкладку виден только контейнер с соответствующим идентификатором.</div>
+                    <div class="text text-l">Каждая вкладка должна ссылаться на свой блок внутри <code>tab__content</code>, поэтому количество вкладок и блоков должно совпадать.</div>
+                </div>
+                <div class="col-6">
+                    <pre>
+              <code class="language-html">
+&lt;div class=&quot;tab__nav &quot;&gt;
+    &lt;a class=&quot;tab__links&quot; data-href=&quot;#tab-content-1&quot;&gt;Имя вкладки&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;tab__content&quot;&gt;
+    &lt;div id=&quot;tab-content-1&quot; class=&quot;tab__item&quot;&gt;
+        Содержимое страницы
+    &lt;/div&gt;
+&lt;/div&gt;
+              </code>
+            </pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Предварительный выбор вкладки -->
+        <div class="container mb-red" id="Предварительный-выбор-вкладки">
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <h1 class="h1">Предварительный выбор вкладки</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="text text-l css">По умолчанию выбрана первая вкладка. Но вы можете заранее выбрать
+                        вкладку,
+                        добавив класс <code>active</code> в тэг <code>a</code>.</div>
+                </div>
+                <div class="col-6">
+                    <pre>
+              <code class="language-html">
+&lt;a class=&quot;tab__links active&quot; data-href=&quot;#tab-content-2&quot;&gt;Имя вкладки&lt;/a&gt;
+              </code>
+            </pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Инициализация (запуск) вкладок -->
+        <div class="container mb-red" id="Инициализация-запуск-вкладок">
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <h1 class="h1">Инициализация (запуск) вкладок</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="text text-l css">Для этого нужно в действиях объекта <code>TXT_№</code> на вкладке «После показа» выбрать <code>javascript</code> и внутри выполнить инициализацию и поверку на разблокировку навигации.</div>
+                </div>
+                <div class="col-6">
+                    <pre>
+              <code class="language-javascript">
+tabs();
+
+$("body").on("click", ".tab__links", function () {
+    if ($('.tab__links:visible.visited').length == $('.tab__links:visible')
+        .length) {
+        $('.btn__primary.nav.disabled:visible').parents().eq(3).hide();
+    }
+});
+              </code>
+          </pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    //= template/footer.html
+</body>
+
+</html>

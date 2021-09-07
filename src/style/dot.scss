@@ -1,0 +1,69 @@
+.dot {
+    &--list {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 20px;
+
+        &::before {
+            position: absolute;
+            left: 0;
+            bottom: 5px;
+            content: '';
+            background-image: url(data:image/png+xml;base64,iVBORw0KGgoAAAANSUhEUgAAA/4AAAAGCAMAAABNa7UWAAAAKlBMVEUAAAAQII8IKJcIKJYIKJYHJ5UIKJUKKJcKKJMKKJcJKJUJKJYKKZUKKJZllrGCAAAADXRSTlMAECA/X29/f4Cfv9/vFpI+xAAAADZJREFUeNrtxAUBADEAw8A+Y/zb3Xw0V4ikQs+aTpLgnn9J6gN8ey5JfYB3i6RC/EckVTqXeQMonjhbOH3R4wAAAABJRU5ErkJggg==);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 6px;
+        }
+    }
+
+    cursor: pointer;
+    width: 133px;
+    display: inline-block;
+    text-align: center;
+    z-index: 1;
+
+    &-inline {
+        display: inline-flex;
+        align-items: flex-start;
+    }
+
+    &--text {
+        text-align: center;
+        font-weight: 600;
+        font-size: $fs16;
+        line-height: $lh24;
+        color: $dark-blue;
+
+        &_before {
+            margin-left: 5px;
+            font-size: $fs12;
+            line-height: $lh17;
+            color: rgba($black, 0.65);
+        }
+    }
+
+    &--item {
+        width: 17px;
+        height: 17px;
+        margin: 0 auto;
+        font-size: 0px;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxNyAxNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iOC41IiBjeT0iOC41IiByPSI0LjUiIGZpbGw9IiMwQTI4OTYiLz4KPC9zdmc+Cg==);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &:hover,
+    &.current {
+        & .dot--item {
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxNyAxNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iOC41IiBjeT0iOC41IiByPSI3IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMUU0QkQyIiBzdHJva2Utd2lkdGg9IjMiLz4KPC9zdmc+Cg==);
+        }
+
+        & .dot--text {
+            color: $black;
+        }
+    }
+}

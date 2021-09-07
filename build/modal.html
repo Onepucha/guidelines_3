@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1280px, initial-scale=1.0">
+  <meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <!-- <link rel="stylesheet" href="./css/mono-blue.css"> -->
+  <link rel="stylesheet" href="./css/main.min.css" />
+
+  <title>Модальные окна</title>
+
+  <header class="header fixed-top">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-24 col-xs-14">
+          <div id="lmm-menu">
+            <lmm-menu :glossary="glossary" :materials="materials" :menu-items="menuItems" :show-content="true"
+              :show-glossary="true" :show-materials="true">
+            </lmm-menu>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container container-header">
+      <div class="mount"></div>
+      <div class="header__top">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex align-items-center">
+              <p class="header__course-name">Гайдлайн</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</head>
+
+
+
+<body>
+<div class="sidenav">
+    <div class="sidenav-left">
+        <div class="sidenav-left-content">
+            <div class="sidenav-left-content--item">
+                <a class="first" data-href="tabs.html" href="./tabs.html">Вкладки / табы (.tabs)</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="timeline.html" href="./timeline.html">Таймлайн</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="speech.html" href="./speech.html">Разговорная выноска / текстовый баллон (.speech)</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="buttons.html" href="./buttons.html">Кнопки (.btn)</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="modal.html" href="./modal.html">Модальные окна (.modal)</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="features.html" href="./features.html">Переворачивающиеся карточки (features)</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="text.html" href="./text.html">Тексты (.text-s/m/l/xl/xxl)</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="list.html" href="./list.html">Списки (.list__ul / .list__ol)</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="plate.html" href="./plate.html">Плитка с текстом, иконкой и разделителем</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="table.html" href="./table.html">Таблица (.table)</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="accordion.html" href="./accordion.html">Раскрывающийся список (.accordion)</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="slider.html" href="./slider.html">Карусель / галерея (.slider_item)</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="course-map.html" href="./course-map.html">Ветвление / карта курса</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="test.html" href="./test.html">Тестирование</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="nav-curse.html" href="./nav-curse.html">Меню курса</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main">
+    <div class="container mb-cyan">
+        <div class="row ">
+            <div class="col-12">
+                <h1 class="h1">Модальные окна</h1>
+            </div>
+        </div>
+    </div>
+    <!-- Для вызова всплывающего (модального) окна -->
+    <div class="container mb-red">
+        <div class="row mb-cyan">
+            <div class="col-12">
+                <h3 class="h3 text-blue">Для вызова всплывающего (модального) окна</h3>
+            </div>
+        </div>
+        <div class="row mb-cyan">
+            <div class="col-12">
+                <div class="text text-l">При нажатии на такую кнопку по центру экрана возникает модальное окно,
+                    содержащее
+                    какую-либо информацию. Оставшаяся часть вне этого окна затемняется.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                    <pre>
+            <code class="language-html">
+&lt;button class=&quot;btn btn__primary btn__round m btn__modal modal-close&quot;&gt;Модальное окно с текстом&lt;/button&gt;
+            </code>
+          </pre>
+            </div>
+        </div>
+        <div class="row mb-yellow">
+            <div class="col-12 css">
+                <div class="text text-l">Используйте модальное окно для диалоговых окон или другого содержимого,
+                    которое можно
+                    вызвать. </div>
+                <div class="text text-l">Чтобы модальное окно работало, нужно вызвать событие — показ определенного
+                    <code>TXT_№</code>. Чтобы создать кнопку закрытия, добавьте класс <code>modal-close</code> к
+                    своей кнопке.
+                </div>
+                <div class="text text-l">Чтобы модальное окно отображалось правильно, нужно в блок с классом
+                    <code>modal</code> добавить блок с классом <code>modal-content</code> (если это модальное окно с
+                    текстом), в
+                    котором находится все наполнение. Блок с классом <code>btn__modal modal-close</code> должен
+                    находится вне
+                    блока с классом <code>modal-content</code>.</div>
+                <div class="text text-l">Чтобы вызвать модальное окно, также можно использовать событие <code>onclick</code>, где <code>#TXT_*</code> идентификатор блока <code>onclick="$('#TXT_344').show()"</code> </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <h5 class="h5 mb-yellow">Пример кода модального окна с кнопкой снизу:</h5>
+                <button class="btn btn__primary btn__round m modal-open" data-href="1">Пример</button>
+                <pre>
+                        <code class="language-html">
+&lt;div class="modal">
+    &lt;div class="modal-content">
+        &lt;div class=&quot;h5 mb-pink&quot;&gt;Пример заголовка в модальном окне с текстом.&lt;/div&gt;
+        &lt;div class=&quot;text text-l&quot;&gt;Пример текста в модальном окне с текстом.&lt;/div&gt;
+    &lt;/div>
+    &lt;div class="btn btn__primary btn__round m btn__modal modal-close">Назад
+    &lt;/div>
+&lt;/div>
+                        </code>
+                  </pre>
+            </div>
+            <div class="col-6">
+                <h5 class="h5 mb-yellow">Пример кода модального окна с икнонкой крестика:</h5>
+                <button class="btn btn__primary btn__round m modal-open" data-href="2">Пример</button>
+                <pre>
+                        <code class="language-html">
+&lt;div class="modal">
+  &lt;div class="modal-content">
+    &lt;div class="modal-icon-close modal-close">&lt;/div>
+    &lt;div class="modal-content-body">
+      <&lt;div class="h5 mb-pink">Пример заголовка в модальном окне с текстом.&lt;/div>
+      &lt;div class="text text-l">Пример текста в модальном окне с.&lt;/div>
+    &lt;/div>
+  &lt;/div>
+&lt;/div>
+                        </code>
+                  </pre>
+            </div>
+            <div class="col-6">
+                <h5 class="h5 mb-yellow">Пример кода модального окна с кнопкой по центру:</h5>
+                <button class="btn btn__primary btn__round m modal-open" data-href="3">Пример</button>
+                <pre>
+                        <code class="language-html">
+&lt;div class="modal">
+  &lt;div class="modal-content">
+    &lt;div class="modal-content-body">
+      &lt;div class="h5 mb-pink">Пример заголовка в модальном окне с текстом.&lt;/div>
+      &lt;div class="text text-l">Пример текста в модальном окне с.&lt;/div>
+    &lt;/div>
+    &lt;div class="btn btn__primary btn__round m btn__modal modal-close">Назад&lt;/div>
+  &lt;/div>
+&lt;/div>
+                        </code>
+                  </pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal content -->
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+        }
+    </style>
+    <div class="modal" data-modal="1">
+        <div class="modal-content">
+            <div class="modal-content-body">
+                <div class="h5 mb-pink">Пример заголовка в модальном окне с текстом.
+                </div>
+                <div class="text text-l">Пример текста в модальном окне с текстом.
+                </div>
+            </div>
+        </div>
+        <div class="btn btn__primary btn__round m btn__modal modal-close">Назад
+        </div>
+    </div>
+    <div class="modal" data-modal="2">
+        <div class="modal-content">
+            <div class="modal-icon-close modal-close"></div>
+            <div class="modal-content-body">
+                <div class="h5 mb-pink">Пример заголовка в модальном окне с текстом.
+                </div>
+                <div class="text text-l">Пример текста в модальном окне с.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" data-modal="3">
+        <div class="modal-content">
+            <div class="modal-content-body">
+                <div class="h5 mb-pink">Пример заголовка в модальном окне с текстом.
+                </div>
+                <div class="text text-l">Пример текста в модальном окне с.
+                </div>
+            </div>
+            <div class="btn btn__primary btn__round m btn__modal modal-close">Назад
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="./js/main.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    modals();
+</script>
+</body>
+
+</html>

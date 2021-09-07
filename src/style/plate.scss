@@ -1,0 +1,65 @@
+.plate {
+  background: #FFFFFF;
+  border: 1px solid $gray;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 15px 20px;
+  transition: 0.3s;
+  width: 100%;
+  &--container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    border-radius: 3px;
+    width: 100%;
+    & .plate {
+      width: 33%;
+    }
+  }
+
+  &+& {
+    margin-left: 30px;
+  }
+
+  &--icon {
+    padding: 30px 20px;
+  }
+
+  &--img {
+    margin: 0 auto;
+    width: 64px;
+    height: auto;
+    display: block;
+  }
+
+  &--nav {
+    display: block;
+    border-radius: 0;
+    padding: 15px 20px 15px 20px;
+
+    &:hover{
+      transform: scale(1.1);
+      cursor: pointer;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      z-index: 1;
+    }
+    
+    & + & {
+      margin: 0;
+    }
+
+    &.visited {
+      background: rgb(234, 237, 245);
+    }
+  }
+
+  
+  &.content {
+    height: 100%;
+    padding: 30px 102px;
+
+    & + & {
+      margin-left: 0px;
+    }
+  }
+}

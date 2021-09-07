@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/head.html',{
+'title': 'Таймлайн',
+'description': '',
+'keywords': '',
+'favicon': 'images/favicon.png'
+})
+
+<body>
+//= template/sidenav.html
+<div class="main">
+    <div class="container mb-blue">
+        <div class="row mb-cyan">
+            <div class="col-12">
+                <h1 class="h1">Таймлайн</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="text text-l">Элемент похож на вертикальные вкладки, но используется,
+                    когда надо показать этапы,
+                    идущие друг за другом. Например, какие-либо даты или действия, выполняющиеся в
+                    определенном порядке.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Таймлайн -->
+    <div class="container mb-yellow" id="Таймлайн">
+        <div class="row">
+            <div class="col-12 mb-green">
+                <div class="dot-tabs">
+                    <div class="dot--list">
+                        <div class="dot-inline">
+                            <div class="dot bm current visited">
+                                <div class="dot--text">14.06
+                                </div>
+                                <div class="dot--item">123
+                                </div>
+                            </div>
+                            <div class="dot--text_before">ПС подключена, но не действует
+                            </div>
+                        </div>
+                        <div class="dot-inline">
+                            <div class="dot bm">
+                                <div class="dot--text">01.07
+                                </div>
+                                <div class="dot--item">&nbsp;
+                                </div>
+                            </div>
+                            <div class="dot--text_before">Первый период страхования
+                            </div>
+                        </div>
+                        <div class="dot-inline">
+                            <div class="dot bm">
+                                <div class="dot--text">01.08
+                                </div>
+                                <div class="dot--item">&nbsp;
+                                </div>
+                            </div>
+                            <div class="dot--text_before">Следующий период страхования
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bm_cont">
+                        <div class="bm_show plate content">
+                            <h3 class="h3 mb-yellow">14.06. Подключаем программу страхования (ПС)
+                            </h3>
+                            <div class="text-l">Программа страхования может быть подключена в любой
+                                день, но действовать начнет
+                                только с 1 календарного числа следующего месяца.
+                            </div>
+                        </div>
+                        <div class="bm_show plate content">
+                            <h3 class="h3 mb-yellow">01.07. ПС начинает действовать с 1 числа
+                            </h3>
+                            <div class="d-flex">
+                                <div style="margin-right: 30px;">
+                                    <div class="text text-l">1-го числа производятся:
+                                    </div>
+                                    <ol class="list__ol text text-l">
+                                        <li class="list__ol-item">Фиксация страховой суммы на месяц
+                                            вперед в размере задолженности по
+                                            карте.
+                                        </li>
+                                        <li class="list__ol-item">Расчет комиссии за подключение
+                                            (страховая премия и комиссия Банка).
+                                        </li>
+                                        <li class="list__ol-item">Списание комиссии за
+                                            подключение.
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div>
+                                    <div class="text text-l text-danger">Страховка не подключится,
+                                        если:
+                                    </div>
+                                    <ol class="list__ol text text-l">
+                                        <li class="list__ol-item">Задолженность менее 500 рублей.
+                                        </li>
+                                        <li class="list__ol-item">Недостаточно средств для списания
+                                            комиссии за подключение программы
+                                            страхования.
+                                        </li>
+                                        <li class="list__ol-item">У Клиента есть просрочка по
+                                            платежам более 5 дней.
+                                        </li>
+                                        <li class="list__ol-item">Клиенту исполнилось или исполнится
+                                            в период страхования 69 лет.
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bm_show plate content">
+                            <h3 class="h3 mb-yellow">01.08. С 1 числа следующего месяца происходит
+                                пролонгация
+                            </h3>
+                            <div class="text text-l">1-го числа нового месяца:
+                            </div>
+                            <ol class="list__ol text text-l mb-yellow">
+                                <li class="list__ol-item">Проверяем, что Клиент не отключил
+                                    страховку.
+                                </li>
+                                <li class="list__ol-item">Если страховка подключена, то проводим все
+                                    действия как в предыдущем месяце.
+                                </li>
+                            </ol>
+                            <div class="text text-l text-danger">При возникновении просроченной
+                                задолженности по карте сроком 90
+                                дней программа будет отключена.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-cyan">
+                <div class="text text-l css">Весь тамлайн строится из базовых элементов курса, кроме
+                    точек <code>dot</code>. Все точки выравниваются по ширине автоматически. Чтобы сделать точку активной,
+                    нужно добавить класс <code>&lt;div class="dot bm current visited"></code>.
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="text text-l text-bold">Пример кода с тремя точками в ряду</div>
+                <pre>
+                <code class="language-html">
+&lt;div class="d-flex justify-content-between">
+  &lt;div class="dot bm current visited">
+    &lt;div class="dot--text">1-й день
+    &lt;/div>
+    &lt;div class="dot--item">
+    &lt;/div>
+  &lt;/div>
+  &lt;div class="dot bm">
+    &lt;div class="dot--text">До 30 дней
+    &lt;/div>
+    &lt;div class="dot--item">
+    &lt;/div>
+  &lt;/div>
+  &lt;div class="dot bm">
+    &lt;div class="dot--text">До 10 дней
+    &lt;/div>
+    &lt;div class="dot--item">
+    &lt;/div>
+  &lt;/div>
+&lt;/div>
+                </code>
+              </pre>
+            </div>
+            <div class="col-6">
+                <div class="text text-l text-bold">Активная точка</div>
+                <pre>
+                <code class="language-html">
+&lt;div class="dot bm current visited">
+    &lt;div class="dot--text">1-й день&lt;/div>
+    &lt;div class="dot--item">&lt;/div>
+&lt;/div>
+                </code>
+              </pre>
+            </div>
+            <div class="col-6">
+                <div class="text text-l text-bold">Не активная точка</div>
+                <pre>
+                <code class="language-html">
+&lt;div class="dot bm">
+    &lt;div class="dot--text">1-й день&lt;/div>
+    &lt;div class="dot--item">&lt;/div>
+&lt;/div>
+                </code>
+              </pre>
+            </div>
+            <div class="col-12">
+                <h5 class="h5 mb-yellow">Пример реализации вкладок:</h5>
+                <div class="text text-l css">Количество вкладок должно соответствовать количеству точек на карте.</div>
+                <pre>
+                <code class="language-html">
+&lt;div class="bm_cont">
+  &lt;div class="bm_show plate content">
+    &lt;div class="text-l">Вкладка 1&lt;/div>
+  &lt;/div>
+  &lt;div class="bm_show plate content">
+    &lt;div class="text-l">Вкладка 2&lt;/div>
+  &lt;/div>
+  &lt;div class="bm_show plate content">
+    &lt;div class="text-l">Вкладка 3&lt;/div>
+  &lt;/div>
+&lt;/div>
+                </code>
+            </pre>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-red" id="Инициализация">
+        <div class="row mb-cyan">
+            <div class="col-12">
+                <h1 class="h1">Инициализация</h1>
+            </div>
+        </div>
+        <div class="row mb-pink">
+            <div class="col-12 css">
+                <div class="text text-l">Чтобы инициализировать (запустить) таймлайн, нужно на
+                    объекте
+                    <code>TXT_№</code> в действиях объекта на вкладке «После показа» выбрать
+                    действие
+                    <code>javascript</code> и внутри выполнить инициализацию.
+                </div>
+                <div class="text text-l text-bold">Инициализация выглядит следующим образом:</div>
+            </div>
+        </div>
+        <div class="row mb-pink">
+            <div class="col-12">
+                  <pre>
+                      <code class="language-javascript hljs">
+$('.bm:visible').removeClass('cur').eq(0).addClass('cur');
+$('.bm_cont:visible .bm_show').hide().eq(0).show();
+                      </code>
+                  </pre>
+            </div>
+        </div>
+    </div>
+</div>
+//= template/footer.html
+</body>
+
+</html>

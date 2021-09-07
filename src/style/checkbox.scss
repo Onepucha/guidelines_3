@@ -1,0 +1,121 @@
+//checkbox
+.checkbox {
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &.s {
+        &__item {
+            position: relative;
+        }
+
+        &__feedback-correct {
+            position: relative;
+            top: 10px;
+            left: 40px;
+            display: block;
+        }
+
+        &__label {
+            cursor: pointer;
+            position: relative;
+            padding: 15px 0 15px 40px;
+            top: 0px;
+            display: block;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0px;
+                width: 20px;
+                height: 20px;
+                background-color: rgba($white, 1);
+                border: 1px solid $gray;
+                border-radius: 5px;
+                margin-top: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &:hover:before {
+                border: 1px solid rgba($dark-blue, 1);
+            }
+
+            &.bg-green {
+                &:before {
+                    background: rgba($green, 0.20);
+                }
+            }
+
+            &.bg-red {
+                &:before {
+                    background: rgba($red, 0.20);
+                }
+            }
+
+            &.border-green {
+                &:before {
+                    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMCAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgNC44MTgxOEwzLjY2NjY3IDhMOSAxIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K) no-repeat center center $green;
+                    background-color: $green;
+                }
+            }
+
+            &.border-red {
+                &:before {
+                    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMCAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgNC44MTgxOEwzLjY2NjY3IDhMOSAxIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K) no-repeat center center $red;
+                    background-color: $red;
+                }
+            }
+
+            &.active:before {
+                background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAARCAMAAADub6yxAAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEHRSTlMAECAwQGB/gI+Qn6C/z9/vgcW5MwAAAFVJREFUeAGVzjsOgDAMg+E25QGlJL7/aVksoSQIqd78TX/JW44PLM3Qs4oBKkl1Tq39qQyh1hvASlWoeGUmvQPYqa9Tg29U70aNDpwe6Zcn+ghCr+4+nvUE+yZWUwQAAAAASUVORK5CYII=) no-repeat center center $blue;
+                border-color: $blue;
+            }
+        }
+
+        &:checked+.checkbox.s__label {
+            :hover:before {
+                background-color: $blue;
+                border-color: $blue;
+            }
+
+            &.bg-red:hover:before {
+                background-color: $red;
+                border-color: $red;
+            }
+
+            &.bg-green:hover:before {
+                background-color: $green;
+                border-color: $green;
+            }
+        }
+
+        &:checked+.checkbox.s__label {
+            &.s__label:before {
+                background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMCAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgNC44MTgxOEwzLjY2NjY3IDhMOSAxIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K) no-repeat center center $blue;
+                border-color: $blue;
+            }
+
+            &.bg-red:before {
+                background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMCAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgNC44MTgxOEwzLjY2NjY3IDhMOSAxIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K) no-repeat center center $red;
+                background-color: $red;
+            }
+
+            &.bg-green:before {
+                background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMCAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgNC44MTgxOEwzLjY2NjY3IDhMOSAxIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K) no-repeat center center $green;
+                background-color: $green;
+            }
+        }
+
+        &.checkbox.s[type="checkbox"][disabled]+label {
+            // color: rgba($black, 0.20);
+            pointer-events: none;
+        }
+
+        &.checkbox.s[type="checkbox"][disabled]+label:before {
+            content: '';
+            border: none;
+        }
+    }
+}

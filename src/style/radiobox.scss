@@ -1,0 +1,123 @@
+//radiobox
+.radiobox {
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &.s {
+        &__item {
+            position: relative;
+            margin: 0;
+        }
+
+        &__label {
+            cursor: pointer;
+            display: block;
+            position: relative;
+            top: 0px;
+            padding: 15px 0 15px 40px;
+
+            &:before {
+                content: '';
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                left: 0px;
+                background-color: rgba($white, 0.15);
+                border: 2px solid $blue;
+                margin-top: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                border-radius: 50%;
+            }
+
+            &:hover:before {
+                border: 2px solid rgba($blue, 0.50);
+            }
+
+            &.bg-green {
+                &:before {
+                    background: rgba($green, 0.20);
+                }
+            }
+
+            &.bg-red {
+                &:before {
+                    background: rgba($red, 0.20);
+                }
+            }
+
+            &.border-green {
+                &:before {
+                    background-color: $white;
+                    border: 7px solid $green !important;
+                }
+            }
+
+            &.border-red {
+                &:before {
+                    border-color: $red !important;
+                }
+            }
+        }
+
+        &__feedback-correct {
+            position: relative;
+            top: 10px;
+            left: 15px;
+            display: block;
+        }
+
+        &:checked+.radiobox.s__label {
+            &.s__label:hover:before {
+                background-color: $white;
+                border: 7px solid rgba($blue, 0.75);
+            }
+
+            &.bg-red:hover:before {
+                background-color: $white;
+                border: 7px solid rgba($red, 0.75);
+            }
+
+            &.bg-green:hover:before {
+                background-color: $white;
+                border: 7px solid rgba($green, 0.75);
+            }
+
+        }
+
+        &:checked+.radiobox.s__label {
+            &:before {
+                background-color: $white;
+                border: 7px solid $blue;
+            }
+
+            &.bg-red:before {
+                background-color: $white;
+                border: 7px solid $red !important;
+            }
+
+            &.bg-green:before {
+                background-color: $white;
+                border: 7px solid $green !important;
+            }
+        }
+
+        &.radiobox.s[type="radio"][disabled]+label {
+            pointer-events: none;
+        }
+
+        &.radiobox.s[type="radio"][disabled]+label:before {
+            content: '';
+        }
+
+        &.radiobox.s[type="radio"][disabled]+label.incorrect:before {
+            border: none;
+        }
+
+        &.radiobox.s[type="radio"][disabled]+label:before:hover {
+            content: '';
+        }
+    }
+}

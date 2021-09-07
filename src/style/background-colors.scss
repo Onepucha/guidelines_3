@@ -1,0 +1,33 @@
+.blue-gradient {
+    background: $blue-gradient !important;
+}
+
+.aqua-gradient {
+    background: $aqua-gradient !important;
+}
+
+.violet-light-gradient {
+    background: $violet-light-gradient !important;
+}
+
+.bg {
+    &-light-blue {
+        background: $light-blue !important;
+    }
+
+    &-blue {
+        background: $blue !important;
+    }
+
+    &-dark-blue {
+        background: $dark-blue !important;
+    }
+
+    &-primary {
+        background-color: #1E4BD2 !important;
+    }
+
+    &-gray {
+        background-color: #EAEDF5 !important;
+    }
+}

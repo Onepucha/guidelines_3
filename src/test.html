@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/head.html',{
+'title': 'Итоговое тестирование',
+'description': '',
+'keywords': '',
+'favicon': 'images/favicon.png'
+})
+
+
+<body>
+//= template/sidenav.html
+<div class="main">
+    <div class="container mb-red">
+        <div class="row mb-yellow">
+            <div class="col-12">
+                <h1 class="h1">Итоговое тестирование</h1>
+            </div>
+        </div>
+        <div class="row mb-cyan">
+            <div class="col-12">
+                <div class="text text-l">В конце курса пользователю необходимо ответить на несколько вопросов. Обычно их 10, но общее их количество может быть больше, просто пользователь увидит 10 случайно выбранных вопросов из общего списка.
+                </div>
+                <div class="text text-l">Также в итоговом тестировании левее блока с вопросом есть счетчик, а после ответа на вопрос выводится обратная связь с текстом «Верно»/«Неверно». Обратите внимание, что варианты ответов в каждом вопросе задаются в случайном порядке.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-red">
+        <div class="row mb-cyan">
+            <div class="col-12">
+                <h3 class="h3 text-blue">Вызов модуля тестирования</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="text text-l">Для вызова тестирования вставьте следующий код:
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <pre>
+                    <code class="language-html">
+        &lt;lmm-test-container-after :close-test-callback="closeTestCallback" :data="assessmentData" :question-number-show="true" :question-threshold="questionThreshold" :random="true">
+        &lt;/lmm-test-container-after>
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-red">
+        <div class="row mb-cyan">
+            <div class="col-12">
+                <h3 class="h3 text-blue">Заполнение вопросов для теста</h3>
+            </div>
+        </div>
+        <div class="row mb-yellow">
+            <div class="col-12">
+                <div class="text text-l css">В поле <code>questionThreshold</code> нужно указать
+                    количество вопросов теста. Все вопросы добавляют в массив
+                    <code>assessmentData</code>.
+                </div>
+                <pre>
+                    <code class="language-html">
+&lt;script>
+new Vue({
+    el: '#frame122',
+    methods: {
+        closeTestCallback: function () {
+            setCommit();
+            $('#next div').eq(0).click();
+        }
+    },
+    data: {
+        questionThreshold: 5,
+        assessmentData: [{
+            question_text: 'Какие риски предусмотрены программой страхования? ',
+            question_type: "checkbox",
+            positiveFeedback: '&lt;div class="text text-m text-bold text-green">Верно!&lt;/div>',
+            negativeFeedback: '&lt;div class="text text-m text-bold text-red">Неверно.&lt;/div>',
+            answers: [{
+                answer_text: "Временная утрата трудоспособности ",
+                is_correct: 1
+            }, {
+                answer_text: "Инвалидность",
+                is_correct: 1
+            }, {
+                answer_text: "Смерть",
+                is_correct: 1
+            }, {
+                answer_text: "Травмы, связанные с занятием профессиональным спортом",
+                is_correct: 0
+            }, {
+                answer_text: "Повреждения здоровья, вызванные радиационным облучением",
+                is_correct: 0
+            }]
+        }, {
+            question_text: 'Когда производится оплата страховой программы?',
+            question_type: "radio",
+            positiveFeedback: '&lt;div class="text text-m text-bold text-green">Верно!&lt;/div>',
+            negativeFeedback: '&lt;div class="text text-m text-bold text-red">Неверно.&lt;/div>',
+            answers: [{
+                answer_text: "Ежемесячно, в первый календарный день месяца",
+                is_correct: 1
+            }, {
+                answer_text: "Ежемесячно, в последний календарный день месяца ",
+                is_correct: 0
+            }, {
+                answer_text: "Еженедельно, в первый день недели ",
+                is_correct: 0
+            }, {
+                answer_text: "Еженедельно, в последний день недели ",
+                is_correct: 0
+            }]
+        }, {
+            question_text: 'Какой лимит страховой суммы имеет программа страхования?',
+            question_type: "radio",
+            positiveFeedback: '&lt;div class="text text-m text-bold text-green">Верно!&lt;/div>',
+            negativeFeedback: '&lt;div class="text text-m text-bold text-red">Неверно.&lt;/div>',
+            answers: [{
+                answer_text: "3 000 000 ₽",
+                is_correct: 1
+            }, {
+                answer_text: "5 000 000 ₽ ",
+                is_correct: 0
+            }, {
+                answer_text: "7 000 000 ₽ ",
+                is_correct: 0
+            }, {
+                answer_text: "10 000 000 ₽ ",
+                is_correct: 0
+            }]
+        }, {
+            question_text: 'Клиенты с некоторыми видами заболеваний не принимаются на страхование. Какие это заболевания?',
+            question_type: "checkbox",
+            positiveFeedback: '&lt;div class="text text-m text-bold text-green">Верно!&lt;/div>',
+            negativeFeedback: '&lt;div class="text text-m text-bold text-red">Неверно.&lt;/div>',
+            answers: [{
+                answer_text: "Онкологические заболевания ",
+                is_correct: 1
+            }, {
+                answer_text: "Сердечно-сосудистые заболевания",
+                is_correct: 1
+            }, {
+                answer_text: "Остеохондроз",
+                is_correct: 0
+            }, {
+                answer_text: "ВИЧ или СПИД",
+                is_correct: 1
+            }, {
+                answer_text: "Заболевания, вызванные воздействием радиации",
+                is_correct: 1
+            }, {
+                answer_text: "Диабет",
+                is_correct: 1
+            }, {
+                answer_text: "Панкреатит",
+                is_correct: 0
+            }]
+        }, {
+            question_text: 'Клиенты каких категорий не принимаются на страхование?',
+            question_type: "checkbox",
+            positiveFeedback: '&lt;div class="text text-m text-bold text-green">Верно!&lt;/div>',
+            negativeFeedback: '&lt;div class="text text-m text-bold text-red">Неверно.&lt;/div>',
+            answers: [{
+                answer_text: "Инвалиды или подавшие на получение инвалидности",
+                is_correct: 1
+            }, {
+                answer_text: "Проходившие лечение в стационаре за последние 6 месяцев",
+                is_correct: 1
+            }, {
+                answer_text: "Состоящие на учете в наркологическом или психоневрологическом диспансере",
+                is_correct: 1
+            }, {
+                answer_text: "Клиенты, возраст которых не находится в границах 18-68 (включительно) лет",
+                is_correct: 1
+            }, {
+                answer_text: "Военнослужащие",
+                is_correct: 0
+            }]
+        }]
+    }
+})
+&lt;/script>
+                    </code>
+                </pre>
+                <div class="text text-l">Задания могут быть 2 типов:</div>
+                <ul class="list__ul text text-m">
+                    <li class="list__ul-item">Единичный выбор.</li>
+                    <li class="list__ul-item">Множественный выбор.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="text text-l css">Внешний вид каждого типа и пользовательское описание их работы представлены ниже. Сейчас мы рассмотрим пример заполнения вопроса с единичным/множественным выбором.</div>
+                <div class="text text-l css">Текст для вопроса вводится в поле <code>question_text</code>. Чтобы изменить тип вопроса, в поле <code>question_type</code> укажите тип <code>checkbox</code> (множественный) или <code>radio</code> (единичный). Чтобы добавить новый ответ в массиве <code>answers</code>, необходимо добавить обьект <code>answer_text</code>. В поле <code>is_correct</code> указывается 1, если это верный ответ, и 0, если неверный.</div>
+                <pre>
+                        <code class="language-html">
+{
+    question_text: 'Какие риски предусмотрены программой страхования? ',
+    question_type: "checkbox",
+    positiveFeedback: '&lt;div class="text text-m text-bold text-green">Верно!&lt;/div>',
+    negativeFeedback: '&lt;div class="text text-m text-bold text-red">Неверно.&lt;/div>',
+    answers: [{
+        answer_text: "Временная утрата трудоспособности ",
+        is_correct: 1
+    }, {
+        answer_text: "Инвалидность",
+        is_correct: 1
+    }, {
+        answer_text: "Смерть",
+        is_correct: 1
+    }, {
+        answer_text: "Травмы, связанные с занятием профессиональным спортом",
+        is_correct: 0
+    }, {
+        answer_text: "Повреждения здоровья, вызванные радиационным облучением",
+        is_correct: 0
+    }]
+}
+                        </code>
+                    </pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-red">
+        <div class="row mb-cyan">
+            <div class="col-12">
+                <h3 class="h3 text-blue">Единичный выбор</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="text text-l css">Пользователь выбирает 1 вариант ответа. Обычно дается 3-4 варианта. Круг у выбранного варианта становится толще, а кнопка «Принять ответ» разблокируется.</div>
+                <div class="text text-l text-bold text-blue">Пример:</div>
+                <div class="text-center">
+                    <img width="986" alt="img-test" class="fluid" src="./images/test_radio.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-red">
+        <div class="row mb-cyan">
+            <div class="col-12">
+                <h3 class="h3 text-blue">Множественный выбор</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="text text-l css">Пользователь выбирает несколько вариантов ответов (от двух до всех возможных). Выбранные ответы выделяются галочкой, и кнопка «Принять ответ» разблокируется.</div>
+                <div class="text text-l text-bold text-blue">Пример:</div>
+                <div class="text-center">
+                    <img width="986" alt="img-test" class="fluid" src="./images/test_checkbox.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+//= template/footer.html
+</body>
+
+</html>

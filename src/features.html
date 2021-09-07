@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/head.html',{
+'title': 'Переворачивающиеся карточки',
+'description': '',
+'keywords': '',
+'favicon': 'images/favicon.png'
+})
+
+<body>
+    //= template/sidenav.html
+    <div class="main">
+        <div class="container mb-cyan">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="h1">Переворачивающиеся карточки (.features)</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Размерность текста -->
+        <div class="container mb-red">
+            <div class="row mb-yellow">
+                <div class="col-12">
+                    <div class="text-l">На лицевой стороне изображена иконка и заголовок того, о чем идет речь в тексте на обратной стороне. Данный элемент выделяется круговыми стрелками в правом нижнем углу.</div>
+                </div>
+            </div>
+            <div class="row mb-green">
+                <div class="col-6">
+                    <pre>
+            <code class="language-html">
+&lt;div class=&quot;features&quot;&gt;
+    &lt;a href=&quot;&quot; class=&quot;features--item&quot;&gt;
+        &lt;div class=&quot;features--item__inner&quot;&gt;
+            &lt;div class=&quot;features--front&quot;&gt;
+                &lt;div&gt;
+                    &lt;img class=&quot;fluid mb-pink&quot; src=&quot;./images/people.png&quot; alt=&quot;&quot;&gt;
+                    &lt;h4 class=&quot;h4 text-blue text-center&quot;&gt;Люди&lt;/h4&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;features--back&quot;&gt;
+                &lt;div&gt;
+                    &lt;div class=&quot;text text-s&quot;&gt;Активный подход к управлению портфелями, обеспечивающий генерацию
+                        добавочной доходности без претензий на вмешательство в корпоративное управление.&lt;/div&gt;
+                    &lt;div class=&quot;text text-s&quot;&gt;Основа инвестиционного подхода – фундаментальный анализ.&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+            </code>
+          </pre>
+                </div>
+                <div class="col-6">
+                    <div class="features" style="width: 100%;">
+                        <a href="" class="features--item" style="width: 100%;">
+                            <div class="features--item__inner">
+                                <div class="features--front">
+                                    <div>
+                                        <img class="fluid mb-pink" src="./images/people.png" alt="">
+                                        <h4 class="h4 text-blue text-center">Люди</h4>
+                                    </div>
+                                </div>
+                                <div class="features--back">
+                                    <div>
+                                        <div class="text text-s">Активный подход к управлению портфелями, обеспечивающий
+                                            генерацию
+                                            добавочной доходности без претензий на вмешательство в корпоративное
+                                            управление.</div>
+                                        <div class="text text-s">Основа инвестиционного подхода — фундаментальный
+                                            анализ.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-yellow">
+                <div class="col-12 css">
+                    <div class="text text-l">Чтобы на экране отобразились элементы, нужно создать блок <code>div</code>
+                        с классом <code>features</code>, внутри которого будут находиться элементы карточек.</div>
+                </div>
+            </div>
+            <div class="row mb-pink">
+                <div class="col-6">
+                    <h4 class="h4 text-blue">features—item</h4>
+                </div>
+                <div class="col-6">
+                    <div class="text text-l">Отвечает за сам элемент карточки шириной в 1/3.</div>
+                </div>
+            </div>
+            <div class="row mb-pink">
+                <div class="col-6">
+                    <h4 class="h4 text-blue">features--item__inner</h4>
+                </div>
+                <div class="col-6 css">
+                    <div class="text text-l">В нем расположены два блока с классами <code>features--front</code> и
+                        <code>features—-back</code>.</div>
+                </div>
+            </div>
+            <div class="row mb-pink">
+                <div class="col-6">
+                    <h4 class="h4 text-blue">features с префиксом –-front </h4>
+                </div>
+                <div class="col-6">
+                    <div class="text text-l">Отвечает за лицевую сторону.</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <h4 class="h4 text-blue">features с префиксом -–back </h4>
+                </div>
+                <div class="col-6">
+                    <div class="text text-l">Отвечает за обратную сторону с наполнением.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    //= template/footer.html
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+/* Modal */
+.modal {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    z-index: 4444;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba($dark-blue, 0.5);
+
+    &-open {
+        cursor: pointer;
+        .divider--text {
+            cursor: pointer;
+        }
+    }
+    &-icon-close {
+        float: right;
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+        background-size: cover;
+        position: relative;
+        &:after, &:before {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: #1E4BD2;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        &:after {
+            transform: rotate(45deg);
+        }
+        &:before {
+            transform: rotate(-45deg);
+        }
+        &:hover {
+            opacity: .8;
+        }
+    }
+
+    &--overflow {
+        position: relative;
+        width: 1280px;
+        height: 720px;
+        background: rgba($dark-blue, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &--content {
+        position: relative;
+        width: 50%;
+        background: $white;
+        border-radius: 5px;
+        padding: 18px 50px 18px 20px;
+    }
+
+    &-content {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $white;
+        padding: 20px 30px 50px 20px;
+        width: 55%;
+        margin: auto;
+        &-scroll {
+            max-height: 70%;
+            overflow-y: auto;
+        }
+
+        &>.btn__modal {
+            bottom: -19px;
+            left: 0;
+            right: auto;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &-footer {
+        background-color: $white;
+        height: 39px;
+        width: 100%;
+        text-align: right;
+    }
+}
+
+.btn__modal {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}

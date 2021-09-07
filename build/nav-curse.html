@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1280px, initial-scale=1.0">
+  <meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <!-- <link rel="stylesheet" href="./css/mono-blue.css"> -->
+  <link rel="stylesheet" href="./css/main.min.css" />
+
+  <title>Меню курса</title>
+
+  <header class="header fixed-top">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-24 col-xs-14">
+          <div id="lmm-menu">
+            <lmm-menu :glossary="glossary" :materials="materials" :menu-items="menuItems" :show-content="true"
+              :show-glossary="true" :show-materials="true">
+            </lmm-menu>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container container-header">
+      <div class="mount"></div>
+      <div class="header__top">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex align-items-center">
+              <p class="header__course-name">Гайдлайн</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</head>
+
+
+
+<body>
+<div class="sidenav">
+    <div class="sidenav-left">
+        <div class="sidenav-left-content">
+            <div class="sidenav-left-content--item">
+                <a class="first" data-href="tabs.html" href="./tabs.html">Вкладки / табы (.tabs)</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="timeline.html" href="./timeline.html">Таймлайн</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="speech.html" href="./speech.html">Разговорная выноска / текстовый баллон (.speech)</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="buttons.html" href="./buttons.html">Кнопки (.btn)</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="modal.html" href="./modal.html">Модальные окна (.modal)</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="features.html" href="./features.html">Переворачивающиеся карточки (features)</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="text.html" href="./text.html">Тексты (.text-s/m/l/xl/xxl)</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="list.html" href="./list.html">Списки (.list__ul / .list__ol)</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="plate.html" href="./plate.html">Плитка с текстом, иконкой и разделителем</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="table.html" href="./table.html">Таблица (.table)</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="accordion.html" href="./accordion.html">Раскрывающийся список (.accordion)</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="slider.html" href="./slider.html">Карусель / галерея (.slider_item)</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="course-map.html" href="./course-map.html">Ветвление / карта курса</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="test.html" href="./test.html">Тестирование</a>
+            </div>
+            <div class="sidenav-left-content--item">
+                <a data-href="nav-curse.html" href="./nav-curse.html">Меню курса</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main">
+    <div class="container mb-cyan">
+        <div class="row ">
+            <div class="col-12">
+                <h1 class="h1">Меню курса</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Для вызова всплывающего (модального) окна -->
+    <div class="container mb-red">
+        <div class="row mb-cyan">
+            <div class="col-12">
+                <h3 class="h3 text-blue">Изменение навигации курса</h3>
+            </div>
+        </div>
+        <div class="row mb-red">
+            <div class="col-12">
+                <div class="text text-l css">Для изменения навигации курса необходимо перейти на
+                    мастер-слайд и изменить текстовый элемент <code>menu</code>. По дефолту все пункты
+                    меню заблокированы. Чтобы сделать пункт активным, нужно убрать class <code>disable</code>.
+                    Чтобы задать переход на нужный кадр, необходимо в событии
+                    <code>onclick</code> вызвать метод <code>gotoFrame('ID_FRAME')</code>, где <code>ID_FRAME</code>
+                    — это идентификатор кадра. Для корректной работы меню необходимо, чтобы
+                    количество слайдов соответствовало количеству пунктов меню.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mb-yellow">
+                <h5 class="text-dark-blue">Пример первого пункта меню:</h5>
+            </div>
+            <div class="col-6">
+                <p class="contents_item-list title first js-nav-link" data-frame="FRAME_37">
+                    Первый пункт меню
+                </p>
+            </div>
+            <div class="col-6">
+                <pre>
+                    <code class="language-html">
+&lt;p class="contents_item-list title first js-nav-link" data-frame="FRAME_37">
+    Первый пункт меню
+&lt;/p>
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mb-yellow">
+                <h5 class="text-dark-blue">Пример заблокированного пункта меню:</h5>
+            </div>
+            <div class="col-6">
+                <div class="contents_item-list js-nav-link disabled" data-frame="ID_FRAME">
+                    <p>Заблокированный пункт меню</p>
+                </div>
+            </div>
+            <div class="col-6">
+                    <pre>
+            <code class="language-html">
+&lt;div class="contents_item-list js-nav-link disabled" data-frame="ID_FRAME">
+    &lt;p>Заблокированный пункт меню&lt;/p>
+&lt;/div>
+            </code>
+          </pre>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mb-yellow">
+                <h5 class="text-dark-blue">Пример многоуровнего списка:</h5>
+            </div>
+            <div class="col-6">
+                <div class="contents_item-list">
+                    <p data-frame="FRAME_119">1. Заголовок</p>
+                    <div class="contents_item-list_subitem contents_item-list js-nav-link"
+                         data-frame="FRAME_103">
+                        Подпункт 1
+                    </div>
+                    <div class="contents_item-list_subitem contents_item-list js-nav-link"
+                         data-frame="FRAME_103">
+                        Подпункт 2
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <pre>
+                    <code class="language-html">
+&lt;div class="contents_item-list title js-nav-link disabled" data-frame="FRAME_118">
+    Пункт меню заголовок
+&lt;/div>
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+<script src="./js/main.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+
+</html>

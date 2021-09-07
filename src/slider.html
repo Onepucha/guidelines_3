@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/head.html',{
+'title': 'Карусель / галерея',
+'description': '',
+'keywords': '',
+'favicon': 'images/favicon.png'
+})
+
+<body>
+    //= template/sidenav.html
+    <div class="main">
+        <div class="container mb-yellow">
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <h1 class="h1 mb-cyan">Карусель / галерея (.slider_item)</h1>
+                    <div class="text text-l">Карусель — это универсальный компонент, который может быть слайдером
+                        изображений, каруселью элементов или интерфейсов.</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <ul class="list__ul">
+                        <li class="list__ul-docs"><a class="scrollto" href="#Описание">Описание</a></li>
+                        <li class="list__ul-docs"><a class="scrollto" href="#Инициализация">Инициализация</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Раскрывающийся список -->
+        <div class="container mb-yellow">
+            <div class="row mb-yellow">
+                <div class="col-12">
+                    <div class="single-item">
+                        <div class="slider_item">
+                            <div class="text-center" style="width: 488px;"><img alt="" class="fluid"
+                                    src="./images/slider_1_1.png" style="width: 218px" />
+                            </div>
+                            <div>
+                                <div class="plate plate--icon" style="width: 591px;">
+                                    <div class="divider left text">
+                                        <div class="divider--text">
+                                            <div class="h2 text-gray">1
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text text-xl">Ознакомьтесь с информацией о роботе-советнике.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider_item">
+                            <div class="text-center" style="width: 488px;"><img alt="" class="fluid"
+                                    src="./images/slider_1_2.png" style="width: 218px" />
+                            </div>
+                            <div>
+                                <div class="plate plate--icon" style="width: 591px;">
+                                    <div class="divider left text">
+                                        <div class="divider--text">
+                                            <div class="h2 text-gray">2
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text text-xl">Ознакомьтесь с информацией о роботе-советнике.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider_item">
+                            <div class="text-center" style="width: 488px;"><img alt="" class="fluid"
+                                    src="./images/slider_1_3.png" style="width: 218px" />
+                            </div>
+                            <div>
+                                <div class="plate plate--icon" style="width: 591px;">
+                                    <div class="divider left text">
+                                        <div class="divider--text">
+                                            <div class="h2 text-gray">3
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text text-xl">Ознакомьтесь с информацией о роботе-советнике.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <pre>
+                <code class="language-html">
+&lt;div class=&quot;single-item&quot;&gt;
+    &lt;div class=&quot;slider_item&quot;&gt;
+        &lt;div class=&quot;text-center&quot; style=&quot;width: 488px;&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;fluid&quot; src=&quot;./images/slider_1_1.png&quot;
+                style=&quot;width: 218px&quot; /&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;div class=&quot;plate plate--icon&quot; style=&quot;width: 591px;&quot;&gt;
+                &lt;div class=&quot;divider left text&quot;&gt;
+                    &lt;div class=&quot;divider--text&quot;&gt;
+                        &lt;div class=&quot;h2 text-gray&quot;&gt;1
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;text text-xl&quot;&gt;Ознакомьтесь с информацией о роботе-советнике.
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;slider_item&quot;&gt;
+        &lt;div class=&quot;text-center&quot; style=&quot;width: 488px;&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;fluid&quot; src=&quot;./images/slider_1_2.png&quot;
+                style=&quot;width: 218px&quot; /&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;div class=&quot;plate plate--icon&quot; style=&quot;width: 591px;&quot;&gt;
+                &lt;div class=&quot;divider left text&quot;&gt;
+                    &lt;div class=&quot;divider--text&quot;&gt;
+                        &lt;div class=&quot;h2 text-gray&quot;&gt;2
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;text text-xl&quot;&gt;Ознакомьтесь с информацией о роботе-советнике.
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;slider_item&quot;&gt;
+        &lt;div class=&quot;text-center&quot; style=&quot;width: 488px;&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;fluid&quot; src=&quot;./images/slider_1_3.png&quot;
+                style=&quot;width: 218px&quot; /&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;div class=&quot;plate plate--icon&quot; style=&quot;width: 591px;&quot;&gt;
+                &lt;div class=&quot;divider left text&quot;&gt;
+                    &lt;div class=&quot;divider--text&quot;&gt;
+                        &lt;div class=&quot;h2 text-gray&quot;&gt;3
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;text text-xl&quot;&gt;Ознакомьтесь с информацией о роботе-советнике.
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                </code>
+              </pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Описание -->
+        <div class="container mb-red" id="Описание">
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <h1 class="h1">Описание</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 css">
+                    <div class="text text-l">Для правильного отображения карусели нужно в блок с классом
+                        <code>single-item</code> добавить нужное количество блоков с классом <code>slider_item</code>,
+                        которые наполняются необходимым контентом.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Инициализация -->
+        <div class="container mb-red" id="Инициализация">
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <h1 class="h1">Инициализация</h1>
+                </div>
+            </div>
+            <div class="row mb-pink">
+                <div class="col-12 css">
+                    <div class="text text-l">Чтобы инициализировать (запустить) слайдер, нужно на объекте
+                        <code>TXT_№</code> в действиях объекта на вкладке «После показа» выбрать действие
+                        <code>javascript</code> и внутри выполнить инициализацию.</div>
+                    <div class="text text-l text-bold">Инициализация выглядит следующем образом:</div>
+                </div>
+            </div>
+            <div class="row mb-pink">
+                <div class="col-12">
+                    <pre>
+            <code class="language-javascript">
+slider();
+            </code>
+        </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    //= template/footer.html
+</body>
+
+</html>

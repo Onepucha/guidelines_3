@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/head.html',{
+'title': 'Таблица',
+'description': '',
+'keywords': '',
+'favicon': 'images/favicon.png'
+})
+
+<body>
+    //= template/sidenav.html
+    <div class="main">
+        <div class="container mb-blue">
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <h1 class="h1">Таблица (.table)</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <ul class="list__ul">
+                        <li class="list__ul-docs"><a class="scrollto" href="#Таблица-с-разделителем">Таблица с
+                                разделителем</a></li>
+                        <li class="list__ul-docs"><a class="scrollto" href="#Таблица-с-ярко-выделенной-шапкой">Таблица с
+                                ярко выделенной шапкой</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Таблица с разделителем -->
+        <div class="container mb-yellow" id="Таблица-с-разделителем">
+            <div class="row mb-cyan">
+                <div class="col-12 css">
+                    <h3 class="h3 text-blue mb-cyan">Таблица с разделителем</h3>
+                    <div class="text text-l">Таблицы — хороший способ организовать большой объем данных. Для стилизации
+                        таблицы с разделеителем достаточно тэгу <code>table</code> присвоить класс <code>table</code>.
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="text text-l text-bold mb-pink">Пример:</div>
+                    <table class="table">
+                        <tr>
+                            <td>1 строчка 1 столбика</td>
+                            <td>1 строчка 2 столбика</td>
+                        </tr>
+                        <tr>
+                            <td class="text-blue">2 строчка 1 столбика</td>
+                            <td class="text-blue">2 строчка 2 столбика</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-6">
+                    <pre>
+            <code class="language-html">
+&lt;table class=&quot;table&quot;&gt;
+    &lt;tr&gt;
+        &lt;td&gt;1 строчка 1 столбика&lt;/td&gt;
+        &lt;td&gt;1 строчка 2 столбика&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class=&quot;text-blue&quot;&gt;2 строчка 1 столбика&lt;/td&gt;
+        &lt;td class=&quot;text-blue&quot;&gt;2 строчка 2 столбика&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+            </code>
+          </pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Таблица с ярко выделенной шапкой -->
+        <div class="container mb-yellow" id="Таблица-с-ярко-выделенной-шапкой">
+            <div class="row mb-cyan">
+                <div class="col-12 css">
+                    <h3 class="h3 text-blue mb-cyan">Таблица с ярко выделенной шапкой</h3>
+                    <div class="text text-l">Для стилизации таблицы с ярко выделенной шапкой добавьте тэгу
+                        <code>table</code> класс <code>table</code>, а затем внутрь тэга <code>table</code> вставьте тэг
+                        <code>thead</code>, внутри которого испльзуются тэги <code>th</code>.</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="text text-l text-bold mb-pink">Пример:</div>
+                    <table class="table">
+                        <thead>
+                            <th class="text text-xl text-dark-blue">Шапка 1 столбца</th>
+                            <th class="text text-xl text-dark-blue">Шапка 2 столбца</th>
+                        </thead>
+                        <tr>
+                            <td>1 строчка 1 столбика</td>
+                            <td>1 строчка 2 столбика</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-6">
+                    <pre>
+            <code class="language-html">
+&lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+        &lt;th class=&quot;text text-xl text-dark-blue&quot;&gt;Шапка 1 столбца&lt;/th&gt;
+        &lt;th class=&quot;text text-xl text-dark-blue&quot;&gt;Шапка 2 столбца&lt;/th&gt;
+    &lt;/thead&gt;
+    &lt;tr&gt;
+        &lt;td&gt;1 строчка 1 столбика&lt;/td&gt;
+        &lt;td&gt;1 строчка 2 столбика&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+            </code>
+          </pre>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    //= template/footer.html
+</body>
+
+</html>

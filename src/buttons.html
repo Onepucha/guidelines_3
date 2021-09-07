@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/head.html',{
+'title': 'Кнопки',
+'description': '',
+'keywords': '',
+'favicon': 'images/favicon.png'
+})
+
+
+<body>
+    //= template/sidenav.html
+    <div class="main">
+        <div class="container mb-blue">
+            <div class="row mb-red">
+                <div class="col-12">
+                    <h1 class="h1 mb-cyan">Кнопки (.btn)</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <ul class="list__ul">
+                        <li class="list__ul-docs"><a class="scrollto" href="#Для-скачивания-документа">Для скачивания
+                                документа</a>
+                        </li>
+                        <li class="list__ul-docs"><a class="scrollto" href="#Для-перехода-между-слайдами">Для перехода
+                                между слайдами</a></li>
+                        <li class="list__ul-docs"><a class="scrollto" href="#Для-перехода-между-слайдами">Подсказка</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Для скачивания документа -->
+        <div class="container mb-red" id="Для-скачивания-документа">
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <h3 class="h3 text-blue">Для скачивания документа</h3>
+                </div>
+            </div>
+            <div class="row mb-cyan">
+                <div class="col-6">
+                    <div class="text text-l">При нажатии на эту кнопку скачивается какой-либо документ, чаще всего в
+                        формате PDF.
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="row center">
+                        <button class="btn btn__primary dark-blue btn__round m"
+                            onclick="openRequestedPopup('./images/pdf/Fond.pdf')">
+                            Скачать
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <pre>
+                <code class="language-html">
+&lt;button class=&quot;btn btn__primary dark-blue btn__round m&quot;
+    onclick=&quot;openRequestedPopup(&#039;./images/pdf/Fond.pdf&#039;)&quot;&gt;
+    Скачать
+&lt;/button&gt;
+                </code>
+              </pre>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 css">
+                    <div class="text text-l">Чтобы скачать файл по клику на кнопку, нужно подготовить файл, который
+                        именуется латинскими буквами без пробелов.</div>
+                    <div class="text text-l">По клику на кнопку вызывается функция
+                        <code>openRequestedPopup</code>, в
+                        которую аргументом функции мы передаем строку, содержащую ссылку на документ или ресурс.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Для перехода между слайдами -->
+        <div class="container mb-red" id="Для-перехода-между-слайдами">
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <h3 class="h3 text-blue">Для перехода между слайдами</h3>
+                </div>
+            </div>
+            <div class="row mb-yellow">
+                <div class="col-6 css">
+                    <div class="text text-l">На каждом слайде в нижней правой части есть счетчик слайдов и кнопки
+                        перехода между ними. Если на слайде есть разговорная выноска / текстовый баллон
+                        <code>.speech</code>, то кнопка «Продолжить» становится некликабельной, чтобы на слайде не было
+                        2 кнопки с одинаковыми функциями.
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="d-flex justify-content-between mb-cyan">
+                        <button class="btn__prev">
+                            <svg class="icon__left red" width="10" height="18" viewBox="0 0 10 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 1L1 9L9 17" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Назад</span>
+                        </button>
+                        <div class="slide__counter">
+                            <span>25</span>
+                            <span>/</span>
+                            <span>159</span>
+                        </div>
+                        <button class="btn__primary nav"><span>Продолжить</span>
+                            <svg class="icon__right" xmlns="http://www.w3.org/2000/svg" width="10" height="18"
+                                viewBox="0 0 10 18" fill="none">
+                                <path d="M1 1L9 9L1 17" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button class="btn__primary nav disabled"><span>Продолжить</span>
+                            <svg class="icon__right gray" xmlns="http://www.w3.org/2000/svg" width="10" height="18"
+                                viewBox="0 0 10 18" fill="none">
+                                <path d="M1 1L9 9L1 17" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-yellow">
+                <div class="col-12">
+                    <div class="text text-l mb-pink">В этих кнопках можно менять цвет стрелки. Для этого в тегах icon__left (стрелка слева) и icon__right (стрелка справа) добавьте название цвета.
+                    </div>
+                    <div class="text text-l mb-pink text-bold">Стандартным считается white, но можно заменить его на:
+                    </div>
+                    <ul class="list__ul text text-m">
+                        <li class="list__ul-item">red</li>
+                        <li class="list__ul-item">blue</li>
+                        <li class="list__ul-item">dark-blue</li>
+                        <li class="list__ul-item">gray</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <pre>
+                        <code class="language-html">
+&lt;button class=&quot;btn__prev&quot;&gt;
+    &lt;svg class=&quot;icon__left red&quot; width=&quot;10&quot; height=&quot;18&quot; viewBox=&quot;0 0 10 18&quot; fill=&quot;none&quot;
+        xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+        &lt;path d=&quot;M9 1L1 9L9 17&quot; stroke=&quot;white&quot; stroke-width=&quot;1.5&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; /&gt;
+    &lt;/svg&gt;
+    &lt;span&gt;Назад&lt;/span&gt;
+&lt;/button&gt;
+&lt;div class=&quot;slide__counter&quot;&gt;
+    &lt;span&gt;25&lt;/span&gt;
+    &lt;span&gt;/&lt;/span&gt;
+    &lt;span&gt;159&lt;/span&gt;
+&lt;/div&gt;
+&lt;button class=&quot;btn__primary nav&quot;&gt;&lt;span&gt;Продолжить&lt;/span&gt;
+    &lt;svg class=&quot;icon__right&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;10&quot; height=&quot;18&quot; viewBox=&quot;0 0 10 18&quot; fill=&quot;none&quot;&gt;
+        &lt;path d=&quot;M1 1L9 9L1 17&quot; stroke=&quot;white&quot; stroke-width=&quot;1.5&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; /&gt;
+    &lt;/svg&gt;
+&lt;/button&gt;
+&lt;button class=&quot;btn__primary nav disabled&quot;&gt;&lt;span&gt;Продолжить&lt;/span&gt;
+    &lt;svg class=&quot;icon__right gray&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;10&quot; height=&quot;18&quot; viewBox=&quot;0 0 10 18&quot;
+        fill=&quot;none&quot;&gt;
+        &lt;path d=&quot;M1 1L9 9L1 17&quot; stroke=&quot;white&quot; stroke-width=&quot;1.5&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; /&gt;
+    &lt;/svg&gt;
+&lt;/button&gt;
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Подсказка -->
+        <div class="container mb-red" id="Подсказка">
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <h3 class="h3 text-blue">Подсказка</h3>
+                </div>
+            </div>
+            <div class="row mb-cyan">
+                <div class="col-10 css">
+                    <div class="text text-l">Работает так же, как и кнопка для вызова модального (всплывающего) окна. Разница лишь во внешнем виде: подсказка не содержит текста и занимает меньше места.
+                    </div>
+                </div>
+                <div class="col-2">
+                    <button class="btn btn__primary blue btn__circle m modal-open" data-href="1">?</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <pre>
+                        <code class="language-html">
+&lt;button class="btn btn__primary blue btn__circle m modal-open">?&lt;/button>
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Modal content -->
+            <style>
+                .modal {
+                    display: none;
+                    position: fixed;
+                }
+            </style>
+            <div class="modal" data-modal="1">
+                <div class="modal-content">
+                    <div class="modal-icon-close modal-close"></div>
+                    <div class="modal-content-body">
+                        <div class="h5 mb-pink">Пример заголовка в модальном окне с текстом.
+                        </div>
+                        <div class="text text-l">Пример текста в модальном окне с.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    //= template/footer.html
+    <script>
+        modals();
+    </script>
+</body>
+
+</html>

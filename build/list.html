@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1280px, initial-scale=1.0">
+  <meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <!-- <link rel="stylesheet" href="./css/mono-blue.css"> -->
+  <link rel="stylesheet" href="./css/main.min.css" />
+
+  <title>Списки</title>
+
+  <header class="header fixed-top">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-24 col-xs-14">
+          <div id="lmm-menu">
+            <lmm-menu :glossary="glossary" :materials="materials" :menu-items="menuItems" :show-content="true"
+              :show-glossary="true" :show-materials="true">
+            </lmm-menu>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container container-header">
+      <div class="mount"></div>
+      <div class="header__top">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex align-items-center">
+              <p class="header__course-name">Гайдлайн</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</head>
+
+
+<body>
+    <div class="sidenav">
+        <div class="sidenav-left">
+            <div class="sidenav-left-content">
+                <div class="sidenav-left-content--item">
+                    <a class="first" data-href="tabs.html" href="./tabs.html">Вкладки / табы (.tabs)</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="timeline.html" href="./timeline.html">Таймлайн</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="speech.html" href="./speech.html">Разговорная выноска / текстовый баллон (.speech)</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="buttons.html" href="./buttons.html">Кнопки (.btn)</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="modal.html" href="./modal.html">Модальные окна (.modal)</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="features.html" href="./features.html">Переворачивающиеся карточки (features)</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="text.html" href="./text.html">Тексты (.text-s/m/l/xl/xxl)</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="list.html" href="./list.html">Списки (.list__ul / .list__ol)</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="plate.html" href="./plate.html">Плитка с текстом, иконкой и разделителем</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="table.html" href="./table.html">Таблица (.table)</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="accordion.html" href="./accordion.html">Раскрывающийся список (.accordion)</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="slider.html" href="./slider.html">Карусель / галерея (.slider_item)</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="course-map.html" href="./course-map.html">Ветвление / карта курса</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="test.html" href="./test.html">Тестирование</a>
+                </div>
+                <div class="sidenav-left-content--item">
+                    <a data-href="nav-curse.html" href="./nav-curse.html">Меню курса</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container mb-blue">
+            <div class="row mb-cyan">
+                <div class="col-12">
+                    <h1 class="h1">Списки (.list__ul / .list__ol)</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <ul class="list__ul">
+                        <li class="list__ul-docs"><a class="scrollto" href="#Маркированный-список">Маркированный
+                                список</a></li>
+                        <li class="list__ul-docs"><a class="scrollto" href="#Нумерованный-список">Нумерованный
+                                список</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Маркированный список -->
+        <div class="container mb-yellow" id="Маркированный-список">
+            <div class="row mb-cyan">
+                <div class="col-12 css">
+                    <h3 class="h3 text-blue">Маркированный список</h3>
+                    <div class="text text-l">Для маркированного списка используется тэг <code>ul</code> с классом
+                        <code>list__ul</code> и класс, отвечающий за размер текста в списке (например,
+                        <code>text-m</code>). Каждый элемент маркированного списка должен иметь класс
+                        <code>list__ul-item,</code>, отвечающий за стилизацию списка.</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="text text-l text-bold">Пример:</div>
+                    <ul class="list__ul text text-m">
+                        <li class="list__ul-item">Пункт 1.</li>
+                        <li class="list__ul-item">Пункт 2.</li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <pre>
+            <code class="language-html">
+&lt;ul class=&quot;list__ul text text-m&quot;&gt;
+    &lt;li class=&quot;list__ul-item&quot;&gt;Пункт 1.&lt;/li&gt;
+    &lt;li class=&quot;list__ul-item&quot;&gt;Пункт 2.&lt;/li&gt;
+&lt;/ul&gt;
+            </code>
+          </pre>
+                </div>
+            </div>
+        </div>
+        <div class="container mb-red">
+            <div class="row mb-cyan">
+                <div class="col-12 css">
+                    <div class="text text-l">Для списка со знаками «+» и «-» нужно поменять префикс, если нужен «+», то
+                        префикс <code>-plus</code>, если нужен минус, то префикс <code>-minus</code>.</div>
+                </div>
+            </div>
+            <div class="row mb-yellow">
+                <div class="col-6">
+                    <div class="text text-l text-bold">Пример списка с «+»:</div>
+                    <ul class="list__ul text text-m">
+                        <li class="list__ul-plus">Пункт 1.</li>
+                        <li class="list__ul-plus">Пункт 2.</li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <pre>
+            <code class="language-html">
+&lt;ul class=&quot;list__ul text text-m&quot;&gt;
+    &lt;li class=&quot;list__ul-plus&quot;&gt;Пункт 1.&lt;/li&gt;
+    &lt;li class=&quot;list__ul-plus&quot;&gt;Пункт 2.&lt;/li&gt;
+&lt;/ul&gt;
+            </code>
+          </pre>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="text text-l text-bold">Пример списка с «-»:</div>
+                    <ul class="list__ul text text-m">
+                        <li class="list__ul-minus">Пункт 1.</li>
+                        <li class="list__ul-minus">Пункт 2.</li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <pre>
+            <code class="language-html">
+&lt;ul class=&quot;list__ul text text-m&quot;&gt;
+    &lt;li class=&quot;list__ul-minus&quot;&gt;Пункт 1.&lt;/li&gt;
+    &lt;li class=&quot;list__ul-minus&quot;&gt;Пункт 2.&lt;/li&gt;
+&lt;/ul&gt;
+            </code>
+          </pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Нумерованный список -->
+        <div class="container mb-yellow" id="Нумерованный-список">
+            <div class="row mb-cyan">
+                <div class="col-12 css">
+                    <h3 class="h3 text-blue">Нумерованный список</h3>
+                    <div class="text text-l">Для нумерованного списка используется тэг <code>ol</code> с классом
+                        <code>list__ol</code> и класс, отвечающий за размер текста в списке (например,
+                        <code>text-m</code>). Каждый элемент нумерованного списка должен иметь класс
+                        <code>list__ol-item</code>, отвечающий за стилизацию списка.</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="text text-l text-bold">Пример:</div>
+                    <ol class="list__ol text text-m">
+                        <li class="list__ol-item">Пункт 1.</li>
+                        <li class="list__ol-item">Пункт 2.</li>
+                    </ol>
+                </div>
+                <div class="col-6">
+                    <pre>
+            <code class="language-html">
+&lt;ol class=&quot;list__ol text text-m&quot;&gt;
+    &lt;li class=&quot;list__ol-item&quot;&gt;Пункт 1.&lt;/li&gt;
+    &lt;li class=&quot;list__ol-item&quot;&gt;Пункт 2.&lt;/li&gt;
+&lt;/ol&gt;
+            </code>
+          </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+
+</html>
